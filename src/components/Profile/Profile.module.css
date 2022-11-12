@@ -1,0 +1,54 @@
+.topImage {
+    width: 100%;
+    background-image: url("../../images/TopImage.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+
+    
+}
+
+.content {
+    grid-area: c;
+    background-color: grey;
+    border: 5px solid black;
+    border-radius: 10px;
+}
+
+.profile__info {
+    margin-top: 20px;
+    margin-left: 20px;
+    display: flex;
+    justify-content: left;
+}
+
+.profile__avatar {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 1px palevioletred;
+    background-image: url("../../images/Avatar2.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.profile__description {
+    font-size: 25px;
+    color: aquamarine;
+    margin-left: 30px;
+}
+
+.my__posts {
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.postAvatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-image: url('../../images/Avatar2.jpg');
+    background-size: cover;
+    background-position: center;
+}

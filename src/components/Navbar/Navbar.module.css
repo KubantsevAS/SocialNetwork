@@ -1,0 +1,7 @@
+.nav {
+    grid-area: n;
+    border: 5px solid black;
+    border-radius: 10px;
+    font-size: 30px;
+    text-align: center;
+}
