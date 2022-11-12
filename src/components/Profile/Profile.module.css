@@ -8,12 +8,6 @@
     
 }
 
-.content {
-    grid-area: c;
-    background-color: grey;
-    border: 5px solid black;
-    border-radius: 10px;
-}
 
 .profile__info {
     margin-top: 20px;
@@ -41,14 +35,7 @@
 
 .my__posts {
     margin-top: 20px;
+    margin-left: 20px;
     font-size: 20px;
 }
 
-.postAvatar {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-image: url('../../images/Avatar2.jpg');
-    background-size: cover;
-    background-position: center;
-}

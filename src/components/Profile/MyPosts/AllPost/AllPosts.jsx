@@ -4,10 +4,10 @@ import PostItem from './PostItem/PostItem';
 const AllPosts = () => {
     return (
         <div className='AllPosts'>
-                    <PostItem/>
-                    <PostItem/>
-                    <PostItem/>
-                </div>
+            <PostItem message='Hi, how are you?' number='20'/>
+            <PostItem message="It's my first post" number='15'/>
+            <PostItem number='12'/>
+        </div>
     )
 }
 

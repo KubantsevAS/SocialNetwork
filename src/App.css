@@ -9,3 +9,10 @@
     grid-template-columns: 2fr 10fr;
     /* grid-gap: 10px; */
 }
+
+.app-wrapper-content {
+    grid-area: c;
+    background-color: grey;
+    border: 5px solid black;
+    border-radius: 10px;
+}

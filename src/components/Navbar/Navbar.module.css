@@ -4,4 +4,28 @@
     border-radius: 10px;
     font-size: 30px;
     text-align: center;
+    display: block;
 }
+
+.item {
+    color: black;
+    text-decoration: none;
+}
+
+.itemGlob {
+    display: block;
+    background-color: aliceblue;
+    margin-bottom: 5px;
+    cursor: pointer;   
+}
+
+.itemGlob:hover {
+    background-color: rgb(154, 160, 165);
+}
+
+.active {
+    color: darkblue;
+    text-decoration: none;
+    
+}
+

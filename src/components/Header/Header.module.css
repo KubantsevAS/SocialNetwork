@@ -2,4 +2,6 @@
     grid-area: h;
     border: 5px solid black;
     border-radius: 10px;
+    display: flex;
+    align-items: center;
 }
