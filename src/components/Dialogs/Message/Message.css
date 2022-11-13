@@ -1,0 +1,14 @@
+.message {
+    margin: 10px 0 10px 30px;
+    padding: 10px 20px;
+    max-width: 35%;
+    background-color: gainsboro;
+    color: black;
+    font-size: 25px;
+    border-radius: 20px;
+}
+
+.right {
+    margin-left: auto;
+    margin-right: 40px;
+}

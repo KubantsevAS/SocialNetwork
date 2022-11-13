@@ -1,0 +1,51 @@
+
+.friendName {
+    font-size: 25px;
+    text-align: center;
+}
+
+.friendAvatar {
+
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.photo1 {
+    background-image: url('../../../../redux/images/avatars/avatar1.jpg');
+    background-size: cover;
+    background-position: center;
+    
+}
+
+.photo2 {
+    background-image: url('../../../../redux/images/avatars/avatar2.jpg');
+    background-size: cover;
+    background-position: center;
+    
+}
+.photo3 {
+    background-image: url('../../../../redux/images/avatars/avatar3.jpg');
+    background-size: cover;
+    background-position: center;
+    
+}
+.photo4 {
+    background-image: url('../../../../redux/images/avatars/avatar4.jpg');
+    background-size: cover;
+    background-position: center;
+    
+}
+.photo5 {
+    background-image: url('../../../../redux/images/avatars/avatar5.jpg');
+    background-size: cover;
+    background-position: center;
+    
+}
+.photo6 {
+    background-image: url('../../../../redux/images/avatars/avatar6.jpg');
+    background-size: cover;
+    background-position: center;
+    
+}

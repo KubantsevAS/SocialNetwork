@@ -9,9 +9,9 @@ const Dialogs = (props) => {
 
     
 
-    let dialogsElements = props.dialogsData.map(el => (<DialogItem name={el.name} id={el.id}/>))
+    let dialogsElements = props.state.dialogsData.map(el => (<DialogItem name={el.name} ava={el.ava}/>))
     
-    let messagesElements = props.messagesData.map(el => (<Message message={el.message}/>));
+    let messagesElements = props.state.messagesData.map(el => (<Message message={el.message} number={el.id}/>));
 
     return (
         <div className={classes.dialogPage}>
@@ -20,9 +20,14 @@ const Dialogs = (props) => {
                 {dialogsElements}
                 
             </div>
-            <div className={classes.messagesItems}>
+            <div className={classes.rightPanel}>
+                <div className={classes.border}>
+                    
+                </div>
+                <div className={classes.messagesPanel}>
+                    {messagesElements}
+                </div>
                 
-                {messagesElements}
                 
             </div>
         </div>

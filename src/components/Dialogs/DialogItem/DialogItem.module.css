@@ -4,3 +4,20 @@
     font-size: 25px;
     font-weight: bold;
 }
+
+.contactItem {
+    background-color: gainsboro;
+    margin: 10px 0;
+    padding: 5px;
+    width: 90%;
+}
+
+.leftPanel {
+    display: flex;
+    align-items: center;
+}
+
+.userName {
+    margin-left: 15px;
+    width: 100%;
+}
