@@ -1,7 +1,13 @@
 import React from 'react';
 import classes from '../Profile.module.css'
 import AllPosts from './AllPost/AllPosts';
-const MyPosts = () => {
+
+
+
+const MyPosts = (props) => {
+
+
+
     return (
         <div className={classes.my__posts}>
                 <h1>My Posts</h1>
@@ -10,7 +16,7 @@ const MyPosts = () => {
                     <button>Add post</button>
                     <button>Remove</button>
                 </div>
-                <AllPosts/>
+                <AllPosts postsData={props.postsData}/>
             </div>
     )
 }

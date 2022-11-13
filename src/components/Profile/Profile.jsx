@@ -3,7 +3,7 @@ import classes from './Profile.module.css';
 import MyPosts from './MyPosts/MyPosts.jsx';
 import ProfileInfo from './ProfileInfo/ProfileInfo';
 
-const Profile = () => {
+const Profile = (props) => {
     return (
         <div>
             <div className={classes.topImage}>
@@ -12,7 +12,7 @@ const Profile = () => {
 
             <ProfileInfo/>
 
-            <MyPosts/>
+            <MyPosts postsData={props.postsData}/>
             
         </div>
     );
