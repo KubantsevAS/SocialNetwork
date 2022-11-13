@@ -1,0 +1,26 @@
+.dialogPage {
+    display: grid;
+    grid-template-columns: 2fr 5fr;
+    color: white
+}
+
+.dialogItems {
+    padding: 10px;
+    display: block;
+}
+
+.user {
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+
+.messagesItems {
+
+}
+
+.message {
+
+}
