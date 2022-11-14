@@ -9,15 +9,8 @@
     display: block;
 }
 
-.border {
-    width: 3px;
-    height: 100%;
-    background-color: black;
-    content: '';
-}
-
 .rightPanel {
-    display: flex;
+    border-left: 4px solid black;
 }
 
 .messagesPanel {

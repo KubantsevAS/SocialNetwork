@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import classes from './Dialogs.module.css';
 import DialogItem from './DialogItem/DialogItem';
 import Message from './Message/Message';
+import PrintMessage from './PrintMessage/PrintMessage';
 
 
 const Dialogs = (props) => {
@@ -21,12 +22,12 @@ const Dialogs = (props) => {
                 
             </div>
             <div className={classes.rightPanel}>
-                <div className={classes.border}>
-                    
-                </div>
+                
                 <div className={classes.messagesPanel}>
                     {messagesElements}
                 </div>
+
+                <PrintMessage/>
                 
                 
             </div>
