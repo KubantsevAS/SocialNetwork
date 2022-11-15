@@ -12,7 +12,10 @@ const Profile = (props) => {
 
             <ProfileInfo/>
 
-            <MyPosts postsData={props.state.postsData} addPost={props.addPost}/>
+            <MyPosts postsData={props.profilePage.postsData}
+            addPost={props.addPost}
+            updateNewPostText={props.updateNewPostText}
+            newPostText={props.profilePage.newPostText}/>
             
         </div>
     );

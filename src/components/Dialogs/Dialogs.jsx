@@ -27,7 +27,12 @@ const Dialogs = (props) => {
                     {messagesElements}
                 </div>
 
-                <PrintMessage/>
+                <PrintMessage 
+                messagesData={props.state.messagesData} 
+                newMessageText={props.state.newMessageText}
+                updateNewMessageText={props.updateNewMessageText}
+                addMessage={props.addMessage}
+                />
                 
                 
             </div>

@@ -1,21 +1,31 @@
 import React from 'react';
 import classes from './PrintMessage.module.css'
 
-const PrintMessage = () => {
+const PrintMessage = (props) => {
 
     let newPost = React.createRef();
 
-    const Print = () => {
+    let addMessage = () => {
         let text = newPost.current.value;
-
-        alert(text);
+        if (!newPost.current.value) {
+            return
+        }
+        props.addMessage(text);
     }
+
+    let onMessageChange = () => {
+        let text = newPost.current.value;
+        props.updateNewMessageText(text);
+    }
+
+
+
 
     return (
         <div className={classes.printAreaBorder}>
             <div className={classes.printArea}>
-                <textarea className={classes.newMessage} ref={newPost}></textarea>
-                <label for='post' className={classes.postBtn} onClick={Print}>
+                <textarea className={classes.newMessage} ref={newPost} value={props.newMessageText} onChange={onMessageChange}/>
+                <label for='post' className={classes.postBtn} onClick={addMessage}>
                     <div className={classes.Arrow}></div>
                 </label>
                 <button className={classes.btn}></button>

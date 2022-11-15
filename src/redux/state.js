@@ -18,6 +18,7 @@ let state = {
             { id: 4, message: 'Anyway what it takes' },
             { id: 5, message: 'lol' },
         ],
+        newMessageText : ''
     },
 
     profilePage: {
@@ -26,6 +27,7 @@ let state = {
             { id: 2, message: "It's my first post", number: 15 },
             { id: 3, message: "Let's go!", number: 32 },
         ],
+        newPostText : 'ReactRedux'
     },
 
     friendsPanel: {
@@ -37,13 +39,39 @@ let state = {
     }
 };
 
-export let addPost = (postMessage) => {
+export let addPost = () => {
     let newPost = {
         id: 4,
-        message: postMessage,
+        message: state.profilePage.newPostText,
         number: 0,
     };
     state.profilePage.postsData.push(newPost);
+    state.profilePage.newPostText = '';
+    rerenderEntireTree(state);
+}
+export let updateNewPostText = (newText) => {
+    
+    state.profilePage.newPostText = newText;
+    rerenderEntireTree(state);
+}
+
+export let addMessage = () => {
+    let newId = state.messagesPage.messagesData[state.messagesPage.messagesData.length - 1].id
+    let newMessage = {
+        id: newId + 1,
+        message: state.messagesPage.newMessageText,
+    };
+
+    state.messagesPage.messagesData.push(newMessage);
+
+    state.messagesPage.newMessageText = '';
+
+    rerenderEntireTree(state);
+}
+
+export let updateNewMessageText = (newMessage) => {
+    
+    state.messagesPage.newMessageText = newMessage;
     rerenderEntireTree(state);
 }
 
