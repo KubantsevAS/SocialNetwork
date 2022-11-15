@@ -33,7 +33,7 @@ const Navbar = (props) => {
                 </div>
             </NavLink>
 
-            <FriendsMenu friendsList={props.state.friendsList}/>
+            <FriendsMenu friendsList={props.friendsPanel.friendsList}/>
         </nav>
     );
 }

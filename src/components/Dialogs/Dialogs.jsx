@@ -8,11 +8,10 @@ import PrintMessage from './PrintMessage/PrintMessage';
 
 const Dialogs = (props) => {
 
-    
 
-    let dialogsElements = props.state.dialogsData.map(el => (<DialogItem name={el.name} ava={el.ava}/>))
+    let dialogsElements = props.state.messagesPage.dialogsData.map(el => (<DialogItem name={el.name} ava={el.ava}/>));
     
-    let messagesElements = props.state.messagesData.map(el => (<Message message={el.message} number={el.id}/>));
+    let messagesElements = props.state.messagesPage.messagesData.map(el => (<Message message={el.message} number={el.id}/>));
 
     return (
         <div className={classes.dialogPage}>
@@ -28,10 +27,9 @@ const Dialogs = (props) => {
                 </div>
 
                 <PrintMessage 
-                messagesData={props.state.messagesData} 
-                newMessageText={props.state.newMessageText}
-                updateNewMessageText={props.updateNewMessageText}
-                addMessage={props.addMessage}
+                messagesData={props.state.messagesPage.messagesData} 
+                newMessageText={props.state.messagesPage.newMessageText}
+                store={props.store}
                 />
                 
                 

@@ -10,14 +10,13 @@ const PrintMessage = (props) => {
         if (!newPost.current.value) {
             return
         }
-        props.addMessage(text);
+        props.store.addMessage(text);
     }
 
     let onMessageChange = () => {
         let text = newPost.current.value;
-        props.updateNewMessageText(text);
+        props.store.updateNewMessageText(text);
     }
-
 
 
 

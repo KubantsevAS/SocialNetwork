@@ -12,17 +12,23 @@ import Settings from './components/Settings/Settings';
 
 function App(props) {
 
+  
 
   return (
     <BrowserRouter>
       <div className="app-wrapper">
         <Header />
-        <Navbar state={props.state.friendsPanel}/>
+        <Navbar friendsPanel={props.state.friendsPanel}/>
 
         <div className='app-wrapper-content'>
           <Routes>
-            <Route path='/dialogs' element={<Dialogs state={props.state.messagesPage} addMessage={props.addMessage} updateNewMessageText={props.updateNewMessageText}/>} />
-            <Route path='/profile' element={<Profile profilePage={props.state.profilePage} addPost={props.addPost} updateNewPostText={props.updateNewPostText}/>} />
+            <Route path='/dialogs' element={<Dialogs store={props.store}
+              state={props.state}/>} />
+
+            <Route path='/profile' element={<Profile  
+              state={props.state}
+              dispatch={props.dispatch}
+              />} />
 
 
             <Route path='/news' element={<News/>} />
