@@ -1,6 +1,6 @@
 import React from 'react';
 import classes from './PrintMessage.module.css'
-import {AddMessageActionCreator, updateNewMessageText} from './../../../redux/state'
+import {AddMessageActionCreator, updateNewMessageText} from './../../../redux/dialogsReducer'
 
 const PrintMessage = (props) => {
 
