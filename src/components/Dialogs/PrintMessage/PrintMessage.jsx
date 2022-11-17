@@ -9,7 +9,7 @@ const PrintMessage = (props) => {
     let addMessage = () => {
         if (!newPost.current.value) {
             return
-        }
+        }  
         props.dispatch(AddMessageActionCreator())
     }
 

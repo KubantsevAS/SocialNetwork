@@ -27,7 +27,7 @@
     align-items: center;
     width: 80%;
     margin-left: 70px;
-    justify-content: end;
+    justify-content: flex-end;
 }
 
 .postAvatar {
