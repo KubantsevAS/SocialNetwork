@@ -29,7 +29,7 @@ const Dialogs = (props) => {
                 <PrintMessage 
                 messagesData={props.state.messagesPage.messagesData} 
                 newMessageText={props.state.messagesPage.newMessageText}
-                store={props.store}
+                dispatch={props.dispatch}
                 />
                 
                 

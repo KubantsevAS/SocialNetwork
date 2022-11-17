@@ -1,21 +1,21 @@
 import React from 'react';
 import classes from './PrintMessage.module.css'
+import {AddMessageActionCreator, updateNewMessageText} from './../../../redux/state'
 
 const PrintMessage = (props) => {
 
     let newPost = React.createRef();
 
     let addMessage = () => {
-        let text = newPost.current.value;
         if (!newPost.current.value) {
             return
         }
-        props.store.addMessage(text);
+        props.dispatch(AddMessageActionCreator())
     }
 
     let onMessageChange = () => {
         let text = newPost.current.value;
-        props.store.updateNewMessageText(text);
+        props.dispatch(updateNewMessageText(text));
     }
 
 
