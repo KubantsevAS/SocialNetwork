@@ -3,11 +3,11 @@ import './App.css';
 import Header from './components/Header/Header.jsx'
 import Navbar from './components/Navbar/Navbar';
 import Profile from './components/Profile/Profile';
-import Dialogs from './components/Dialogs/Dialogs';
 import { Route, Routes } from 'react-router-dom'
 import News from './components/News/News';
 import Music from './components/Music/Music';
 import Settings from './components/Settings/Settings';
+import DialogsContainer from './components/Dialogs/DialogsContainer';
 
 function App(props) {
 
@@ -23,9 +23,7 @@ function App(props) {
         <Routes>
 
 
-          <Route path='/dialogs' element={<Dialogs
-            dispatch={props.dispatch}
-            state={props.state} 
+          <Route path='/dialogs' element={<DialogsContainer
             store={props.store}
             />} />
 

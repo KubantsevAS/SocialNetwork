@@ -1,21 +1,20 @@
 import React from 'react';
 import classes from './PrintMessage.module.css'
-import {AddMessageActionCreator, updateNewMessageText} from './../../../redux/dialogsReducer'
 
 const PrintMessage = (props) => {
 
     let newPost = React.createRef();
 
-    let addMessage = () => {
+    let onAddMessage = () => {
         if (!newPost.current.value) {
             return
         }  
-        props.dispatch(AddMessageActionCreator())
+        props.addMessage();
     }
 
-    let onMessageChange = () => {
+    let onConMessageChange = () => {
         let text = newPost.current.value;
-        props.dispatch(updateNewMessageText(text));
+        props.onMessageChange(text);
     }
 
 
@@ -23,8 +22,8 @@ const PrintMessage = (props) => {
     return (
         <div className={classes.printAreaBorder}>
             <div className={classes.printArea}>
-                <textarea className={classes.newMessage} ref={newPost} value={props.newMessageText} onChange={onMessageChange}/>
-                <label for='post' className={classes.postBtn} onClick={addMessage}>
+                <textarea className={classes.newMessage} ref={newPost} value={props.newMessageText} onChange={onConMessageChange}/>
+                <label for='post' className={classes.postBtn} onClick={onAddMessage}>
                     <div className={classes.Arrow}></div>
                 </label>
                 <button className={classes.btn}></button>

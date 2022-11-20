@@ -1,34 +1,28 @@
 import React from 'react';
 import classes from './Dialogs.module.css';
-import DialogItem from './DialogItem/DialogItem';
-import Message from './Message/Message';
 import PrintMessage from './PrintMessage/PrintMessage';
 
 
 const Dialogs = (props) => {
 
-
-    let dialogsElements = props.state.messagesPage.dialogsData.map(el => (<DialogItem name={el.name} ava={el.ava}/>));
-    
-    let messagesElements = props.state.messagesPage.messagesData.map(el => (<Message message={el.message} number={el.id}/>));
-
     return (
         <div className={classes.dialogPage}>
             <div className={classes.dialogItems}>
 
-                {dialogsElements}
+                {props.dialogsElements}
                 
             </div>
             <div className={classes.rightPanel}>
                 
                 <div className={classes.messagesPanel}>
-                    {messagesElements}
+                    {props.messagesElements}
                 </div>
 
                 <PrintMessage 
-                messagesData={props.state.messagesPage.messagesData} 
-                newMessageText={props.state.messagesPage.newMessageText}
-                dispatch={props.dispatch}
+                messagesData={props.messagesData} 
+                newMessageText={props.newMessageText}
+                addMessage={props.addMessage} 
+                onMessageChange={props.onMessageChange}
                 />
                 
                 
