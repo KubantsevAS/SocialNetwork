@@ -25,11 +25,12 @@ function App(props) {
 
           <Route path='/dialogs' element={<Dialogs
             dispatch={props.dispatch}
-            state={props.state} />} />
+            state={props.state} 
+            store={props.store}
+            />} />
 
           <Route path='/profile' element={<Profile
-            state={props.state}
-            dispatch={props.dispatch}
+            store={props.store}
           />} />
 
 
