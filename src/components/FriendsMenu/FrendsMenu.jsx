@@ -1,17 +1,15 @@
 import React from 'react';
 import FriendsItems from './FriendsItems/FriendsItems';
+import {connect} from 'react-redux'
 
-const FriendsMenu = (props) => {
 
-
-    return (
-        <div>
-            <h3>Friends</h3>
-            <FriendsItems 
-                //friendsList={props.friendsList}
-            />
-        </div>
-    )
+const mapStateToProps = (state) => {
+    return {
+        friendsList: state.friendsPanel.friendsList
+    }
 }
+const FriendsMenu = connect (mapStateToProps) (FriendsItems)
+
+
 
 export default FriendsMenu;

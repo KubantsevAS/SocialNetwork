@@ -18,7 +18,7 @@ function App(props) {
     <div className="app-wrapper">
       <Header />
       <Navbar 
-        // friendsPanel={props.state.friendsPanel} 
+        //friendsPanel={props.state.friendsPanel} 
       />
 
       <div className='app-wrapper-content'>
