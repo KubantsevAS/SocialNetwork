@@ -7,7 +7,9 @@ const FriendsMenu = (props) => {
     return (
         <div>
             <h3>Friends</h3>
-            <FriendsItems friendsList={props.friendsList}/>
+            <FriendsItems 
+                //friendsList={props.friendsList}
+            />
         </div>
     )
 }

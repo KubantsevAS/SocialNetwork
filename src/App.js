@@ -17,18 +17,20 @@ function App(props) {
 
     <div className="app-wrapper">
       <Header />
-      <Navbar friendsPanel={props.state.friendsPanel} />
+      <Navbar 
+        // friendsPanel={props.state.friendsPanel} 
+      />
 
       <div className='app-wrapper-content'>
         <Routes>
 
 
           <Route path='/dialogs' element={<DialogsContainer
-            store={props.store}
-            />} />
+            //store={props.store}
+          />} />
 
           <Route path='/profile' element={<Profile
-            store={props.store}
+          // store={props.store}
           />} />
 
 
