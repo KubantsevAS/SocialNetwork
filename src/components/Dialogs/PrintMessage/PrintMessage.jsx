@@ -2,7 +2,6 @@ import React from 'react';
 import classes from './PrintMessage.module.css'
 
 const PrintMessage = (props) => {
-
     let newPost = React.createRef();
 
     let onAddMessage = () => {
@@ -23,7 +22,7 @@ const PrintMessage = (props) => {
         <div className={classes.printAreaBorder}>
             <div className={classes.printArea}>
                 <textarea className={classes.newMessage} ref={newPost} value={props.newMessageText} onChange={onConMessageChange}/>
-                <label for='post' className={classes.postBtn} onClick={onAddMessage}>
+                <label htmlFor='post' className={classes.postBtn} onClick={onAddMessage}>
                     <div className={classes.Arrow}></div>
                 </label>
                 <button className={classes.btn}></button>

@@ -25,7 +25,7 @@ const PostItem = (props) => {
 
             <div className={classes.LikePanel}>
                 <div className={classes.LikeNumber}>{likeCounter}</div>
-                <label for="likes" className={classes.Like} onClick={addLike}>Like</label>
+                <label htmlFor="likes" className={classes.Like} onClick={addLike}>Like</label>
                 <button id="likes" className={classes.LikeButton}></button>
             </div>  
 

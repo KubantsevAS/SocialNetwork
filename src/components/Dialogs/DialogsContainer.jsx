@@ -10,8 +10,9 @@ import { AddMessageActionCreator, updateNewMessageText } from './../../redux/dia
 let mapStateToProps = (state) => {
     return {
         messagesPage : state.messagesPage,
-        dialogsElements : state.messagesPage.dialogsData.map(el => (<DialogItem name={el.name} ava={el.ava} />)),
-        messagesElements : state.messagesPage.messagesData.map(el => (<Message message={el.message} number={el.id} />)),
+        dialogsElements : state.messagesPage.dialogsData.map(el => (<DialogItem name={el.name} ava={el.ava} key={el.id}/>)),
+        messagesElements : state.messagesPage.messagesData.map(el => (<Message message={el.message} number={el.id} key={el.id}/>)),
+        newMessageText : state.messagesPage.newMessageText,
     }
 }
 let mapDispatchToProps = (dispatch) => {
