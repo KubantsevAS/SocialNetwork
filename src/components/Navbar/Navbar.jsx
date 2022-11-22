@@ -32,6 +32,11 @@ const Navbar = (props) => {
                     Settings
                 </div>
             </NavLink>
+            <NavLink to='/users' className={navData => navData.isActive ? classes.active : classes.item}>
+                <div className={classes.itemGlob}>
+                    Users
+                </div>
+            </NavLink>
 
             <FriendsMenu 
             // friendsList={props.friendsPanel.friendsList}
