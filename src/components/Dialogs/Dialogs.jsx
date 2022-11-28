@@ -22,7 +22,7 @@ const Dialogs = (props) => {
                 
                 newMessageText={props.newMessageText}
                 addMessage={props.addMessage} 
-                onMessageChange={props.onMessageChange}
+                onMessageChange={props.updateNewMessageText}
                 />
                 
                 
