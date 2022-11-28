@@ -30,8 +30,6 @@ class UsersContainer extends React.Component {
 
     render() {
 
-        console.log(this.props.pageSize)
-        console.log(this.props)
         return (
             <>
                 {this.props.isFetching ? <Preloader/> : null}
@@ -84,5 +82,4 @@ let mapStateToProps = (state) => {
 
 export default connect(mapStateToProps, 
     {follow, unfollow, setUsers, 
-        setCurrentPage, setTotalUsersCount, 
-        toggleIsFetching,})(UsersContainer);
+        setCurrentPage, setTotalUsersCount, toggleIsFetching,})(UsersContainer);

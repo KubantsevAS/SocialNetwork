@@ -1,5 +1,7 @@
 import React from 'react'
 import styles from './Users.module.css';
+import defAva from './../../images/AvaDefault.jpg'
+import { NavLink } from 'react-router-dom';
 
 const Users = (props) => {
 
@@ -25,7 +27,7 @@ const Users = (props) => {
                 props.users.map(user => <div key={user.id}>
                     <span>
                         <div>
-                            <img src={user.photoUrl} alt='ava' className={styles.userPhoto}></img>
+                            <NavLink to={'/profile/' + user.id}><img src={user.photoUrl || defAva} alt='ava' className={styles.userPhoto}/></NavLink>
                         </div>
                         <div>
                             {!user.followed
