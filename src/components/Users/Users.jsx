@@ -11,7 +11,6 @@ const Users = (props) => {
         for (let i = 1; i <= pagesCount; i++) {
             pages.push(i);
         }
-
     return (
 
         <div>
@@ -27,7 +26,7 @@ const Users = (props) => {
                 props.users.map(user => <div key={user.id}>
                     <span>
                         <div>
-                            <NavLink to={'/profile/' + user.id}><img src={user.photoUrl || defAva} alt='ava' className={styles.userPhoto}/></NavLink>
+                            <NavLink to={'/profile/' + user.id}><img src={user.photos.large || defAva} alt='ava' className={styles.userPhoto}/></NavLink>
                         </div>
                         <div>
                             {!user.followed
