@@ -1,12 +1,10 @@
 import React from 'react';
 import classes from './Dialogs.module.css';
 import PrintMessage from './PrintMessage/PrintMessage';
-import { Navigate } from 'react-router-dom';
 
 
 const Dialogs = (props) => {
 
-if (props.isAuth === false) return <Navigate to={'/login'} />;
     return (
         <div className={classes.dialogPage}>
             <div className={classes.dialogItems}>
