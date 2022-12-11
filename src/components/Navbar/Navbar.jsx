@@ -8,7 +8,7 @@ const Navbar = (props) => {
     return (
         <nav className={classes.nav}>
 
-            <NavLink to='/profile' id='lin1' className={navData => navData.isActive ? classes.active : classes.item}>
+            <NavLink to='/profile/:userId' id='lin1' className={navData => navData.isActive ? classes.active : classes.item}>
                 <div className={classes.itemGlob}>Profile</div>
             </NavLink>
 

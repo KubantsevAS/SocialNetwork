@@ -13,6 +13,7 @@ let mapStateToProps = (state) => {
         dialogsElements : state.messagesPage.dialogsData.map(el => (<DialogItem name={el.name} ava={el.ava} key={el.id}/>)),
         messagesElements : state.messagesPage.messagesData.map(el => (<Message message={el.message} number={el.id} key={el.id}/>)),
         newMessageText : state.messagesPage.newMessageText,
+        isAuth: state.auth.isAuth,
     }
 }
 
