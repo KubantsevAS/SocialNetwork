@@ -25,7 +25,6 @@ const MyPosts = (props) => {
                 <div>
                     <textarea ref={newPostElement} value={props.profilePage.newPostText} onChange={onNewPostChange}/>
                     <button onClick={onAddPost}>Add post</button>
-                    <button>Remove</button>
                 </div>
                 <AllPosts postsData={props.profilePage.postsData}/>
             </div>
