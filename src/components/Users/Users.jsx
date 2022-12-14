@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './Users.module.css';
-import defAva from './../../images/AvaDefault.jpg'
+import defAva from './../../redux/images/avatars/AvaDefault.png'
 import { NavLink } from 'react-router-dom';
 
 const Users = (props) => {
