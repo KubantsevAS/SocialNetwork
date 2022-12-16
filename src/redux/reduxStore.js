@@ -11,7 +11,8 @@ let reducers = combineReducers({
     messagesPage: dialogsReducer,
     friendsPanel: friendsPanelReducer,
     usersPage: usersReducer,
-    auth: authReducer
+    auth: authReducer,
+    //form: formReducer,
 })
 
 let store = createStore(reducers, applyMiddleware(thunkMiddleware));
