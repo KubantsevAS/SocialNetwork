@@ -3,7 +3,6 @@ import styles from './FormsControls.module.css'
 
 const FormControl = (props) => {
     const hasError = props.meta.error && props.meta.touched;
-    debugger
     return (
         <span className={styles.formControl + " " + (hasError ? styles.error : "")}>
             <>{props.children}</>

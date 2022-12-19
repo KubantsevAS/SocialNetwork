@@ -22,9 +22,7 @@ class ProfileContainer extends React.Component {
             userId = 2;
         }
         this.props.getUserInfo(userId);
-        //setTimeout(() => {
-            this.props.getStatus(userId)
-        //}, 1000)
+        this.props.getStatus(userId);
     }
 
     render() {
@@ -44,5 +42,5 @@ let mapStateToProps = (state) => ({
 export default compose(
     connect(mapStateToProps, { getUserInfo, getStatus, updateStatus }),
     withRouter,
-    //withAuthRedirect
+    withAuthRedirect
 ) (ProfileContainer);

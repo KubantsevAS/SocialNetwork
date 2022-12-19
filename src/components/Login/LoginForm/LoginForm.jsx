@@ -8,7 +8,7 @@ const LoginForm = (props) => {
     return (
         <Form
             onSubmit={values => {
-
+                props.login(values.login, values.password, values.rememberMe)
             }}
 
         >
@@ -18,7 +18,7 @@ const LoginForm = (props) => {
                         <Field placeholder={"Login"} component={'input'} name={"login"} validate={composeValidators(requiredField, maxLengthCreator(22))}>
                             {({ input, meta }) => (
                                 <div>
-                                    <Input {...input} meta={meta} type="text" placeholder={"Post text"} />
+                                    <Input {...input} meta={meta} type="text" placeholder={"Email"} />
                                 </div>
                             )}
                         </Field>
@@ -27,7 +27,7 @@ const LoginForm = (props) => {
                         <Field placeholder={"Password"} component={"input"} name={"password"} validate={composeValidators(requiredField, maxLengthCreator(22))}>
                             {({ input, meta }) => (
                                 <div>
-                                    <Input {...input} meta={meta} type="text" placeholder={"Post text"} />
+                                    <Input {...input} meta={meta} type="password" placeholder={"Password"} />
                                 </div>
                             )}
                         </Field>
