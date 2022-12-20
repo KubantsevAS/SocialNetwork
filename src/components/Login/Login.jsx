@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import LoginReduxFrom from './LoginForm/LoginForm'
-import { login, logout } from '../../redux/authReducer'
+import LoginFrom from './LoginForm/LoginForm'
+import { login} from '../../redux/authReducer'
 import { Navigate } from 'react-router-dom'
 
 const Login = (props) => {
@@ -12,7 +12,7 @@ const Login = (props) => {
     return (
         <div>
             <h1>Login</h1>
-            <LoginReduxFrom login={props.login} logout={props.logout}/>
+            <LoginFrom login={props.login} errorMessage={props.errorMessage}/>
         </div>
 
     )
@@ -20,7 +20,8 @@ const Login = (props) => {
 
 const mapDispatchToProps = (state) => ({
     isAuth: state.auth.isAuth,
-    id: state.auth.id
+    id: state.auth.id,
+    errorMessage : state.auth.errorMessage
 })
 
-export default connect (mapDispatchToProps, {login, logout}) (Login)
+export default connect (mapDispatchToProps, {login}) (Login)

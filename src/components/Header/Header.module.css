@@ -4,6 +4,14 @@
     border-radius: 10px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+}
+
+.header img {
+    /* width: 275px; 
+    height: 200px; */
+    height: 100%;
+    width: auto;
 }
 
 .loginBlock {
