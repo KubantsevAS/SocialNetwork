@@ -15,9 +15,6 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
             <React.StrictMode>
                 <Provider store={store}>
                     <App
-                        // store={store}
-                        // state={state}
-                        // dispatch={store.dispatch.bind(store)}
                     />
                 </Provider>
             </React.StrictMode>
