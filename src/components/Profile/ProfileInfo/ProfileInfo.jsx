@@ -1,7 +1,7 @@
 import React from 'react';
 import Preloader from '../../Common/Preloader/Preloader';
 import classes from './ProfileInfo.module.css'
-import ProfileStatus from './ProfileStatus';
+import ProfileStatusWithHooks from './ProfileStatusWithHooks';
 import AdminAva from './../../../redux/images/avatars/adminAva.jpg'
 
 const ProfileInfo = (props) => {
@@ -17,7 +17,7 @@ const ProfileInfo = (props) => {
             <div className={classes.profile__description}>
                 <div className={classes.profile__name}>Full name: {props.profile.fullName}</div>
                 <div className={classes.profile__age}>About me: {props.profile.aboutMe}</div>
-                <ProfileStatus status={props.status} updateStatus={props.updateStatus}/>
+                <ProfileStatusWithHooks status={props.status} updateStatus={props.updateStatus}/>
             </div>
             
         </div>
