@@ -4,15 +4,23 @@ import AllPosts from './AllPost/AllPosts';
 import NewPostForm from './NewPostForm/NewPostForm';
 
 
-const MyPosts = (props) => {
-    
-    return (
-        <div className={classes.my__posts}>
+class MyPosts extends React.Component {
+
+    shouldComponentUpdate(nextProps, nextState) {
+        return nextProps !== this.props && nextState !== this.state;
+    }
+
+    render () {
+        console.log("props")
+        return (
+            <div className={classes.my__posts}>
                 <h1>My Posts</h1>
-                <NewPostForm addNewPost={props.addPost}/>
-                <AllPosts postsData={props.profilePage.postsData}/>
+                <NewPostForm addNewPost={this.props.addPost} />
+                <AllPosts postsData={this.props.profilePage.postsData} />
             </div>
-    )
-}
+        )}
+    }
+
+
 
 export default MyPosts;

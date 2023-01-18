@@ -13,7 +13,7 @@ const LoginForm = (props) => {
     
     const onSubmit = async values => {
         props.login(values.login, values.password, values.rememberMe)
-        await sleep(300)
+        await sleep(500)
         if (!props.errorMessage) {
             return {[FORM_ERROR] : `Try another email`}
         }
