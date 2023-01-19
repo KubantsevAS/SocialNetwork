@@ -6,9 +6,9 @@ import NewPostForm from './NewPostForm/NewPostForm';
 
 class MyPosts extends React.Component {
 
-    shouldComponentUpdate(nextProps, nextState) {
-        return nextProps !== this.props && nextState !== this.state;
-    }
+    // shouldComponentUpdate(nextProps, nextState) {
+    //     return nextProps !== this.props && nextState !== this.state;
+    // }
 
     render () {
         console.log("props")

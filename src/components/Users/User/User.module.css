@@ -1,0 +1,17 @@
+.userCard {
+    display: flex;
+    margin: 20px;
+    font-size: 20px;
+}
+
+.userCard span {
+    margin-right: 15px;
+}
+
+.userPhoto {
+    border-radius: 30%;
+    width: 100px;
+    height: 100px;
+    background-color: aliceblue;
+}
+
