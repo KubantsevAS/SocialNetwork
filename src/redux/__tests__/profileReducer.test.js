@@ -12,38 +12,41 @@ let state = {
     status: "",
 }
 
-test('posts number should be incremented', () => {
-    // TEST DATA
-    let action = addPost('newPost_eye')
-    //ACTION
-    let newState = profileReducer(state, action);
-    //EXPECTATION
-    expect(newState.postsData.length).toBe(4);
-})
+describe("profileReducer test", () => {
+    
+    test('posts number should be incremented', () => {
+        // TEST DATA
+        const action = addPost('newPost_eye');
+        //ACTION
+        const newState = profileReducer(state, action);
+        //EXPECTATION
+        expect(newState.postsData.length).toBe(4);
+    })
 
-test('new post text test', () => {
-    
-    let action = addPost('newPost_eye')
-    
-    let newState = profileReducer(state, action);
-    
-    expect(newState.postsData[3].message).toBe("newPost_eye");
-})
+    test('new post text test', () => {
 
-test('posts number after deleting post should be decremented', () => {
-    
-    let action = deletePost(1)
-    
-    let newState = profileReducer(state, action);
-    
-    expect(newState.postsData.length).toBe(2);
-})
+        const action = addPost('newPost_eye');
 
-test("posts number after deleting post shouldn't be decremented if id is incorecct", () => {
-    
-    let action = deletePost(1000)
-    
-    let newState = profileReducer(state, action);
-    
-    expect(newState.postsData.length).toBe(3);
+        const newState = profileReducer(state, action);
+
+        expect(newState.postsData[3].message).toBe("newPost_eye");
+    })
+
+    test('posts number after deleting post should be decremented', () => {
+
+        const action = deletePost(1);
+
+        const newState = profileReducer(state, action);
+
+        expect(newState.postsData.length).toBe(2);
+    })
+
+    test("posts number after deleting post shouldn't be decremented if id is incorecct", () => {
+
+        const action = deletePost(1000);
+
+        const newState = profileReducer(state, action);
+
+        expect(newState.postsData.length).toBe(3);
+    })
 })

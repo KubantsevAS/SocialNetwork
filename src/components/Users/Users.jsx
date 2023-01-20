@@ -12,6 +12,7 @@ const Users = ({ currentPage, onPageChanged, totalUsersCount, pageSize, ...props
                 onPageChanged={onPageChanged}
                 currentPage={currentPage}
                 pageSize={pageSize}
+                portionSize={10}
             />
             
             <User
