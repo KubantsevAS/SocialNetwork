@@ -1,5 +1,6 @@
 import profileReducer, { addPost, deletePost } from "../profileReducer";
 // in package.json was:   "test": "react-scripts test",
+// should be: "test": "jest"
 
 let state = {
     postsData: [
