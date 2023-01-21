@@ -1,4 +1,4 @@
-.userPhoto {
+.loginPhoto {
     width: 70%;
     height: 70%;
     background-color: #444444;
@@ -8,18 +8,24 @@
     border-top-left-radius: 50%;
     border-bottom-left-radius: 50%;
 }
+.userPhoto {
+    width: 100%;
+    height: auto;
+}
 
 .photoField {
     width: 120px;
     height: 120px;
+    margin: 0 auto;
     border-radius: 50%;
     position: relative;
     background-color: #444444;
+    margin-bottom: 20px;
 }
 
 .myLinkCommon{
     text-decoration: none;
-    color: orange;
+    color: white;
 }
 
 .myInfo{

@@ -13,11 +13,17 @@
 }
 
 .itemGlob {
-    display: block;
+    display: flex;
+    align-items: center;
     background-color: #333333;
     padding: 5px 0 5px;
     cursor: pointer;
     border-bottom: 1px solid #444444;   
+}
+
+.imgIcon{
+    height: 30px;
+    margin: 0 30px;
 }
 
 .itemGlob:first-child {
@@ -29,8 +35,14 @@
 }
 
 .active {
-    color: white;
+    color: #40C057;
     text-decoration: none;
     
+}
+
+@media (max-width: 1200px) {
+    .nav {
+        font-size: 20px;
+    }
 }
 

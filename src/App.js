@@ -35,7 +35,7 @@ class App extends React.Component {
     return (
 
       <div className="app-wrapper">
-        <HeaderContainer />
+        {/* <HeaderContainer /> */}
         <Navbar />
 
         <div className='app-wrapper-content'>
