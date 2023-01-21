@@ -8,7 +8,7 @@ const FriendsItems = (props) => {
     
     return (
         <div>
-            <h3>Friends</h3>
+            <h3 className={classes.title}>Friends</h3>
             <div className={classes.friendsPanel}>
                 {props.Friends}
             </div>

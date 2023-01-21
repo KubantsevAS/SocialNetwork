@@ -1,30 +1,35 @@
 .nav {
     grid-area: n;
-    border: 5px solid black;
-    border-radius: 10px;
     font-size: 30px;
     text-align: center;
     display: block;
+    background-color: #333333;
+    color: #bababa;
 }
 
 .item {
-    color: black;
+    color: #bababa;
     text-decoration: none;
 }
 
 .itemGlob {
     display: block;
-    background-color: aliceblue;
-    margin-bottom: 5px;
-    cursor: pointer;   
+    background-color: #333333;
+    padding: 5px 0 5px;
+    cursor: pointer;
+    border-bottom: 1px solid #444444;   
+}
+
+.itemGlob:first-child {
+    border-top: 1px solid #444444;
 }
 
 .itemGlob:hover {
-    background-color: rgb(154, 160, 165);
+    background-color: #555555;
 }
 
 .active {
-    color: darkblue;
+    color: white;
     text-decoration: none;
     
 }

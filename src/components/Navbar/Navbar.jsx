@@ -2,44 +2,31 @@ import React from 'react';
 import classes from './Navbar.module.css';
 import { NavLink } from 'react-router-dom';
 import FriendsMenu from '../FriendsMenu/FrendsMenu';
+import MyProfileBlockContainer from '../MyProfileBlock/MyProfileBlockContainer';
 
-const Navbar = (props) => {
+const Navbar = () => {
+
+const navbarLink = (adress, linkName) => {
+    return (
+        <NavLink to={adress} className={navData => navData.isActive ? classes.active : classes.item}>
+            <div className={classes.itemGlob}>{linkName}</div>
+        </NavLink>
+    )
+}
 
     return (
         <nav className={classes.nav}>
 
-            <NavLink to='/profile/:userId' id='lin1' className={navData => navData.isActive ? classes.active : classes.item}>
-                <div className={classes.itemGlob}>Profile</div>
-            </NavLink>
+            <MyProfileBlockContainer/>
 
-            <NavLink to='/dialogs' className={navData => navData.isActive ? classes.active : classes.item}>
-                <div className={classes.itemGlob}>
-                    Messages
-                </div>
-            </NavLink>
-            <NavLink to='/news' className={navData => navData.isActive ? classes.active : classes.item}>
-                <div className={classes.itemGlob}>
-                    News
-                </div>
-            </NavLink>
-            <NavLink to='/music' className={navData => navData.isActive ? classes.active : classes.item}>
-                <div className={classes.itemGlob}>
-                    Music
-                </div>
-            </NavLink>
-            <NavLink to='/settings' className={navData => navData.isActive ? classes.active : classes.item}>
-                <div className={classes.itemGlob}>
-                    Settings
-                </div>
-            </NavLink>
-            <NavLink to='/users' className={navData => navData.isActive ? classes.active : classes.item}>
-                <div className={classes.itemGlob}>
-                    Users
-                </div>
-            </NavLink>
+            {navbarLink('/profile/:userId', 'Profile')}
+            {navbarLink('/dialogs', 'Messages')}
+            {navbarLink('/news', 'News')}
+            {navbarLink('/music', 'Music')}
+            {navbarLink('/settings', 'Settings')}
+            {navbarLink('/users', 'Users')}
 
-            <FriendsMenu 
-            // friendsList={props.friendsPanel.friendsList}
+            <FriendsMenu
             />
         </nav>
     );
