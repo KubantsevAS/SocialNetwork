@@ -16,7 +16,9 @@ const MyProfileBlock = (props) => {
     return (
         <div className={styles.myInfo}>
             <NavLink to={linkNav} className={styles.myLinkCommon}>
-                <div className={styles.photoField}><img className={props.isAuth? styles.userPhoto :styles.loginPhoto} alt={props.id} src={props.isAuth ? defAva : login}></img></div>
+                <div className={styles.photoField}>
+                    <img className={props.isAuth? styles.userPhoto :styles.loginPhoto} alt={props.id} src={props.isAuth ? defAva : login}></img>
+                </div>
                 <div>{text}</div>
             </NavLink>
         </div>

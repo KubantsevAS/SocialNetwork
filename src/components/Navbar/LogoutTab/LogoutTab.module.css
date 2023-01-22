@@ -17,6 +17,9 @@
 .logoutTab:hover {
     background-color: #555555;
 }
+.logoutTab:active {
+    background-color: #666666;
+}
 
 .lgImg{
     height: 30px;

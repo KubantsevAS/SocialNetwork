@@ -33,6 +33,9 @@
 .itemGlob:hover {
     background-color: #555555;
 }
+.itemGlob:active {
+    background-color: #666666;
+}
 
 .active {
     color: #40C057;
