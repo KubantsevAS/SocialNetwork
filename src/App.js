@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { compose } from 'redux';
 import { Provider } from 'react-redux';
 import store from './redux/reduxStore';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, HashRouter } from 'react-router-dom';
 
 import UsersContainer from './components/Users/UsersContainer';
 import HeaderContainer from './components/Header/HeaderContainer';
@@ -52,14 +52,16 @@ class App extends React.Component {
 
               <Route path='/dialogs' element={<DialogsContainer />} />
 
-              <Route path={`/profile/:userId`} element={<ProfileContainer />} />
+              <Route path='/profile/:userId'
+                element={<ProfileContainer/>} 
+              />
 
 
               <Route path='/news' element={<News />} />
               <Route path='/music' element={<Music />} />
               <Route path='/settings' element={<Settings />} />
 
-              <Route path='/users' element={<UsersContainer />} />
+              <Route path='/users' element={<UsersContainer/>} />
 
               <Route path='/login' element={<Login />} />
 
@@ -82,13 +84,15 @@ let AppContainer = compose(
   withRouter,
   connect(mapStatetoProps, { initializeApp }))(App);
 
-let MainApp = (props) => {
+let MainApp = () => {
   return (
-    <BrowserRouter>
+    <HashRouter
+      //basename={process.env.PUBLIC_URL}  //ENVIROMENT FOR GITHUBPAGES
+    >
       <Provider store={store}>
         <AppContainer />
       </Provider>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 

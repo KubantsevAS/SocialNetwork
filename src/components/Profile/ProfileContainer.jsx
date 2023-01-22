@@ -1,7 +1,7 @@
 import React from 'react'
 import Profile from './Profile';
 import { connect } from 'react-redux';
-import { getUserInfo, getStatus, updateStatus} from '../../redux/profileReducer';
+import { getUserInfo, getStatus, updateStatus, uploadPhoto} from '../../redux/profileReducer';
 import { useParams } from 'react-router-dom'
 import withAuthRedirect from '../../hoc/withAuthRedirect';
 import { compose } from 'redux';
@@ -16,7 +16,7 @@ export function withRouter(Children) {
 
 class ProfileContainer extends React.Component {
 
-    componentDidMount() {
+    refreshProfile() {
         let userId = this.props.match.params.userId;
         
         if (!userId) {
@@ -31,12 +31,24 @@ class ProfileContainer extends React.Component {
         this.props.getStatus(userId);
     }
 
+    componentDidMount() {
+        this.refreshProfile();
+    }
+
+    componentDidUpdate (prevProps, prevState, snapshot) {
+        if (this.props.match.params.userId !== prevProps.match.params.userId){
+            this.refreshProfile();
+        }
+        
+    }
 
     render() {
         //if (this.props.isAuth === false) return <Navigate to={'/login'} />
         return (
-            <Profile isAuth={this.props.isAuth}
-                userId={this.props.match.params.userId}
+            <Profile 
+                isOwner={this.props.login}
+
+                isAuth={this.props.isAuth}
                 profile={this.props.profile} 
                 status={this.props.status} 
                 updateStatus={this.props.updateStatus}/>
@@ -47,15 +59,15 @@ class ProfileContainer extends React.Component {
 let mapStateToProps = (state) => ({
     profile: state.profilePage.profile,
     status: state.profilePage.status,
-    authorisedUserId: state.auth.userId,
-    isAuth: state.auth.isAuth,
+    authorisedUserId: state.auth.id,
+    login: state.auth.login
 });
 
 
 export default compose(
     
     //withAuthRedirect,
-    connect(mapStateToProps, { getUserInfo, getStatus, updateStatus }),
+    connect(mapStateToProps, { getUserInfo, getStatus, updateStatus,  uploadPhoto}),
     withRouter,
     
 ) (ProfileContainer);

@@ -9,10 +9,25 @@ const ProfileInfo = (props) => {
     if (!props.profile) {
         return <Preloader/>
     }
+
+    const onMainPhotoSelected = (elem) => {
+        if (elem.target.files.length) {
+            props.uploadPhoto(elem.target.files[0])
+        }
+    }
+
     return (
         <div className={classes.profile__info}>
             <div>
                 <img src={props.profile.photos.large || AdminAva} className={classes.profile__avatar} alt='ava'/>
+                <div>
+                    {props.isOwner && 
+                        <>
+                            <label htmlFor='photoInp'>INPUT PHOTO</label>
+                            <input id='photoInp' type={'file'} onChange={onMainPhotoSelected} className={classes.inputPhoto}/>
+                        </>
+                    }
+                </div>
             </div>
             <div className={classes.profile__description}>
                 <div className={classes.profile__name}>Full name: {props.profile.fullName}</div>

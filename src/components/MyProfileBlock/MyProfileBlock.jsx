@@ -12,7 +12,7 @@ const MyProfileBlock = (props) => {
     } else {
         [linkNav, text] = [`/login`, 'Log in']
     }
-
+    
     return (
         <div className={styles.myInfo}>
             <NavLink to={linkNav} className={styles.myLinkCommon}>

@@ -8,9 +8,13 @@ const Profile = (props) => {
         <div>
             <div className={classes.topImage}>
             </div>
-            <div>{`Secret info: ${props.userId} ${props.isAuth}`}</div>
-            <ProfileInfo profile={props.profile} status={props.status} updateStatus={props.updateStatus}/>
-
+            <div>{`Secret info: Is Owner ${props.isOwner}`}</div>
+            <ProfileInfo 
+                profile={props.profile} 
+                status={props.status} 
+                updateStatus={props.updateStatus} 
+                isOwner={props.isOwner}
+                uploadPhoto={props.uploadPhoto}/>
             <MyPostsContainer/>
             
         </div>
