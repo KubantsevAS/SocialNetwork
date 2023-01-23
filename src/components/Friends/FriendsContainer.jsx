@@ -19,7 +19,7 @@ class FriendsContainer extends Component {
     render() {
         return (
             <>
-                {!this.props.isFetching ? <Preloader /> : null}
+                {/* {!this.props.isFetching ? <Preloader /> : null} */}
                 <Friends {...this.props}/>
             </>   
         );

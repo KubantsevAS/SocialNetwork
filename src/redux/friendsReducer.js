@@ -42,10 +42,10 @@ export const toggleIsFetching = (toggleFetching) => ({ type: TOGGLE_IS_FETCHING,
 export const requestFriends = () => {
     return async (dispatch) => {
 
-        dispatch(toggleIsFetching(true));
+        // dispatch(toggleIsFetching(true));
 
-        let data = await friendsAPI.getUsers(true, 100);
-        dispatch(toggleIsFetching(false));
+        let data = await friendsAPI.getUsers(true, 1, 100);
+        // dispatch(toggleIsFetching(false));
         dispatch(setFriends(data.items));
     }
 }
