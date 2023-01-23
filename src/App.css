@@ -10,6 +10,7 @@
     grid-template-columns: 3fr 10fr;
     /* grid-gap: 10px; */
     background-color: dimgray;
+    font-family: 'Roboto', sans-serif;
 }
 
 .app-wrapper-content {

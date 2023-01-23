@@ -1,6 +1,55 @@
+.searchBlock {
+    width: 500px;
+    margin: 5px auto 20px;
+}
+
+.searchBlock input {
+    width: 100%;
+    height: 40px;
+    font-size: 20px;
+    padding-right: 10%;
+}
+
+.labelBtnSr {
+    height: 40px;
+    background-color: #444444;
+    width: 10%;
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-right-radius: 3px;
+    border-top-right-radius: 3px;
+    transition: background-color linear 0.2s;
+}
+
+
+.labelBtnSr:hover{
+    background-color: #555555;
+}
+.labelBtnSr:active{
+    background-color: #666666;
+}
+
+.btnSrIcon{
+    width: 70%;
+    height: auto;
+}
+.btnSr {
+    display: none;
+}
+
+.inputSearch {
+    display: flex;
+    position: relative;
+}
+
 
 .totalCount{
     margin-top: 0px;
+    font-weight: 400;
 }
 
 .friendsItemsInner {

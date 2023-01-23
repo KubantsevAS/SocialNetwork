@@ -2,16 +2,27 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import styles from './Friends.module.css'
 import defAva from './../../redux/images/avatars/AvaDefault.png'
+import searchIcon from './../../redux/images/icons/search.png'
 
 export default function Friends(props) {
 
     return (
         <div className={styles.friendsPage}>
-            <h2 className={styles.totalCount}>
-                Friends total number {props.users.length}
-            </h2>
+            <div className={styles.searchBlock}>
+                <h2 className={styles.totalCount}>
+                    Friends total number: {props.users.length}
+                </h2>
+                <div className={styles.inputSearch}>
+                    <input type={"search"} placeholder={"Enter user name"}></input>
+                    <label htmlFor="searchBtn" className={styles.labelBtnSr}>
+                        <img src={searchIcon} alt={'serach'} className={styles.btnSrIcon}></img>
+                    </label>
+                    <button id={"searchBtn"} className={styles.btnSr}></button>
+                </div>
+                
+            </div>
 
-            <input type={"search"} placeholder={"Enter user name"}></input>
+
             <div className={styles.friendsItemsInner}>
                 {props.users.map(user => {
                     return (
@@ -25,7 +36,7 @@ export default function Friends(props) {
                                     <span>New Message   </span>
                                     <span>Unfollow</span>
                                 </div>
-                                
+
                             </div>
 
                         </div>
