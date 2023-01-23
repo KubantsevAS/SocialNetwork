@@ -20,11 +20,12 @@ import Music from './components/Music/Music';
 import Settings from './components/Settings/Settings';
 import { Suspense } from 'react';
 
+//import FriendsContainer from './components/Friends/FriendsContainer';
 //import DialogsContainer from './components/Dialogs/DialogsContainer';
 //import ProfileContainer from './components/Profile/ProfileContainer';
 const DialogsContainer = React.lazy(() => import('./components/Dialogs/DialogsContainer'));
 const ProfileContainer = React.lazy(() => import('./components/Profile/ProfileContainer'));
-
+const FriendsContainer = React.lazy(() => import('./components/Friends/FriendsContainer'));
 
 
 class App extends React.Component {
@@ -64,6 +65,8 @@ class App extends React.Component {
               <Route path='/users' element={<UsersContainer/>} />
 
               <Route path='/login' element={<Login />} />
+
+              <Route path='/friends' element={<FriendsContainer />} />
 
 
             </Routes>

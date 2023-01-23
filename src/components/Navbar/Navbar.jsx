@@ -1,7 +1,7 @@
 import React from 'react';
 import classes from './Navbar.module.css';
 import { NavLink } from 'react-router-dom';
-import FriendsMenu from '../FriendsMenu/FrendsMenu';
+import FriendsTab from './FriendsTab/FrendsTab';
 import MyProfileBlockContainer from '../MyProfileBlock/MyProfileBlockContainer';
 import LogoutTab from './LogoutTab/LogoutTab';
 import profilePic from '../../redux/images/icons/profile.png'
@@ -29,7 +29,10 @@ const navbarLink = (adress, linkName, pic) => {
             {navbarLink('/news', 'News', newsPic)}
             {navbarLink('/users', 'Users', usersPic)}
             
-            <FriendsMenu/>
+            <NavLink to='/friends'>
+                <FriendsTab/>
+            </NavLink>
+            
 
             <LogoutTab/>
         </nav>

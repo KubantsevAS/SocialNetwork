@@ -19,7 +19,10 @@ const MyProfileBlock = (props) => {
                 <div className={styles.photoField}>
                     <img className={props.isAuth? styles.userPhoto :styles.loginPhoto} alt={props.id} src={props.isAuth ? defAva : login}></img>
                 </div>
-                <div>{text}</div>
+                <div className={styles.loginTextInner}>{text}
+                </div>
+                
+                    
             </NavLink>
         </div>
     );

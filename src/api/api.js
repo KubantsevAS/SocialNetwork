@@ -73,5 +73,15 @@ export const authAPI = {
     },
 }
 
+export const friendsAPI = {
+
+    getUsers(friend, pageSize) {
+        return instance.get(`users?friend=${friend}&count=${pageSize}`)
+            .then(response => {
+                return response.data;
+            })
+    },
+}
+
 
 

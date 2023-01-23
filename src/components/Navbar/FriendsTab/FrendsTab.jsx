@@ -10,8 +10,8 @@ const mapStateToProps = (state) => {
         Friends : panel
     }
 }
-const FriendsMenu = connect (mapStateToProps) (FriendsItems)
+const FriendsTab = connect (mapStateToProps) (FriendsItems)
 
 
 
-export default FriendsMenu;
+export default FriendsTab;
