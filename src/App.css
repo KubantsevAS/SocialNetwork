@@ -2,16 +2,21 @@
     margin: 0 auto;
     display: grid;
     min-width: 1200px;
-    height: 100vh;
+    height: 100%;
     grid-template-areas: 
     /* "h h" */
     "n c";
     /* grid-template-rows: 50px 1fr; */
     grid-template-columns: 3fr 10fr;
     /* grid-gap: 10px; */
+    background-color: dimgray;
 }
 
 .app-wrapper-content {
     grid-area: c;
-    background-color: gray;
+    background-color: rgb(185, 190, 196);
+    margin: 15px 30px;
+    padding: 10px;
+    border-radius: 15px;
+
 }

@@ -1,0 +1,33 @@
+
+.totalCount{
+    margin-top: 0px;
+}
+
+.friendsItemsInner {
+    flex-wrap: wrap;
+    display: flex;
+}
+.friendItem {
+    display: flex;
+    padding: 20px;
+    font-size: 20px;
+    width: 45%;
+    border: 1px solid #555555;
+}
+
+.friendPhoto {
+    border-radius: 30%;
+    width: 100px;
+    height: 100px;
+    background-color: dimgrey;
+    margin-right: 15px;
+}
+.userName{
+    font-weight: bold;
+    font-size: 25px;
+}
+.friendDescr {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
