@@ -11,9 +11,7 @@
     overflow: hidden;
     border-radius: 50%;
     border: 1px solid #333333;
-    background-image: url("../../../images/Avatar2.jpg");
-    background-size: cover;
-    background-position: center;
+    background-color: #CCCCCC;
 }
 
 .profile__description {

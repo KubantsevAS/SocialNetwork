@@ -11,7 +11,7 @@ const NewPostForm = (props) => {
 
     return (
         <Form onSubmit={addNewPost} >
-            {({handleSubmit, submitting})=>(
+            {({handleSubmit, form, submitting})=>(
             <form onSubmit={handleSubmit}>
                     <Field 
                         name="postField" 
@@ -26,7 +26,7 @@ const NewPostForm = (props) => {
                         )}
                     </Field>
 
-                    <button type={"submit"} disabled={submitting}>Add Post</button>
+                    <button type={"submit"} disabled={submitting} onClick={() => setTimeout(form.reset, 100)}>Add Post</button>
             </form>)}
         </Form>
     );
