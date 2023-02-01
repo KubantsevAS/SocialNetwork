@@ -4,7 +4,7 @@ const ADD_POST = 'profile/ADD-POST';
 const SET_USER_PROFILE = 'profile/SET_USER_PROFILE';
 const SET_USER_STATUS = 'profile/SET_USER_STATUS';
 const DELETE_POST = 'profile/DELETE_POST';
-const SAVE_PHOTO_SUCCESS = 'SAVE_PHOTO_SUCCESS';
+const SAVE_PHOTO_SUCCESS = 'profile/SAVE_PHOTO_SUCCESS';
 
 let initialState = {
     postsData: [
@@ -83,11 +83,11 @@ export const uploadPhoto = (file) => async (dispatch) => {
     }
 }
 
-export const saveProfile = (profile) => async (dispatch) => {
-    let response = await profileAPI.saveProfile(profile);
-    
+export const saveProfile = (profile) => async (dispatch, getState) => {
+    const userId = getState().auth.id;
+    const response = await profileAPI.saveProfile(profile);
     if (response.data.resultCode === 0) {
-        dispatch(setUserProfile(response.data));
+        dispatch(getUserInfo(userId));
     }
 }
 

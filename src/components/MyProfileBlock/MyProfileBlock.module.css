@@ -1,13 +1,13 @@
 .loginPhoto {
     width: 70%;
     height: 70%;
-    background-color: #444444;
     position: absolute;
     right: 20%;
     top: 18%;
     border-top-left-radius: 50%;
     border-bottom-left-radius: 50%;
 }
+
 .userPhoto {
     width: 100%;
     height: auto;
@@ -22,6 +22,17 @@
     background-color: #444444;
     margin-bottom: 20px;
     border: 1px solid #40C057;
+    transition: background-color linear 0.2s;
+    transition: box-shadow linear 0.2s;
+}
+
+.photoField:hover {
+    background-color: #555555;
+    box-shadow: 0 0 25px #555555;
+}
+.photoField:active {
+    background-color: #666666;
+    box-shadow: 0 0 25px #555555;
 }
 
 .myLinkCommon{
