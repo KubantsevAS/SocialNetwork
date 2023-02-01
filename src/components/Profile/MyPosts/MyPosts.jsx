@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from '../Profile.module.css'
+import classes from './MyPosts.module.css'
 import AllPosts from './AllPost/AllPosts';
 import NewPostForm from './NewPostForm/NewPostForm';
 

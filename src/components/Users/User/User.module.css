@@ -14,5 +14,16 @@
     height: 100px;
     background-color: #CCCCCC;
     border: 1px solid #333333;
+    transition: background-color linear 0.1s;
+    transition: box-shadow linear 0.1s;
+}
+
+.userPhoto:hover {
+    background-color: #DDDDDD;
+    box-shadow: 0 0 7px black;
+}
+.userPhoto:active {
+    background-color: #AAAAAA;
+    box-shadow: 0 0 7px black;
 }
 

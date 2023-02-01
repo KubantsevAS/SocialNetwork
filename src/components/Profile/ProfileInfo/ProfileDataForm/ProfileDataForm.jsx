@@ -62,7 +62,7 @@ export default function ProfileDataForm({profile, onSubmit}) {
                     <div>Contacts: {Object.keys(profile.contacts).map(key => {
                         return (
                             <div>
-                                <Contact contactTitle={key} contactValue={profile.contacts[key]} />
+                                <Contact contactTitle={key} />
                                 <Field name={`contacts.${key}`} component={'input'} type={'text'} placeholder={key}/>
                             </div>
                             
