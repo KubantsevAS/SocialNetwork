@@ -3,6 +3,7 @@ import { Form, Field } from 'react-final-form'
 import { composeValidators, maxLengthCreator, requiredField} from '../../../../utilities/validators/validators'
 import { Input, TextArea } from '../../../Common/FormControls/FormsControls'
 import { Contact } from '../ProfileInfo'
+import styles from './ProfileDataForm.module.css'
 
 export default function ProfileDataForm({profile, onSubmit}) {
 
@@ -22,39 +23,45 @@ export default function ProfileDataForm({profile, onSubmit}) {
             {({ handleSubmit, submitting}) => (
                 <form onSubmit={handleSubmit}>
 
-                    <div>Full Name:
+                    <div className={styles.mainInfo}>
+
+                    <div className={styles.mainInfo__item} subscribe='Full Name'>
                         <Field component={'input'} name={"fullName"} validate={composeValidators(requiredField)}>
                             {({ input, meta }) => (
                                 <div>
-                                    <TextArea {...input} meta={meta} type="text"  placeholder={"fullName"}/>
+                                    <Input {...input} meta={meta} type="text" placeholder={"fullName"} styles={styles.input}/>
                                 </div>
                             )}
                         </Field>
                     </div>
 
-                    <div>About me:
+                    <div className={styles.mainInfo__item} subscribe='About Me'>
                         <Field component={'input'} name={"aboutMe"} validate={composeValidators(requiredField)}>
                             {({ input, meta }) => (
                                 <div>
-                                    <Input {...input} meta={meta} type="text" placeholder={"About me"} />
+                                    <Input {...input} meta={meta} type="text" placeholder={"About me"} styles={styles.input}/>
                                 </div>
                             )}
                         </Field>
                     </div>
                     
-                    <div>Looking for a job: 
-                        <Field name="lookingForAJob" component="input" type="checkbox" />
+                    <div className={styles.mainInfo__item} subscribe='Job Status'> 
+                        <Field name="lookingForAJob" component="input" type="checkbox" className={styles.chekbox}/>
                     </div>
 
-                    <div>My professional skills:
+                    <div className={styles.mainInfo__item} subscribe='My Professional Skills'>
                         <Field component={'input'} name={"lookingForAJobDescription"} validate={composeValidators(requiredField)}>
                             {({ input, meta }) => (
                                 <div>
-                                    <TextArea {...input} meta={meta} type="text" placeholder={"skills"} />
+                                    <TextArea {...input} meta={meta} type="text" placeholder={"skills"} styles={styles.input}/>
                                 </div>
                             )}
                         </Field>
                     </div>
+
+
+                    </div>
+                    
 
 
                     
@@ -69,7 +76,7 @@ export default function ProfileDataForm({profile, onSubmit}) {
                         )
                     })}
                     </div>
-                    <button type={"submit"} disabled={submitting}>
+                    <button type={"submit"} disabled={submitting} id="ProfileFormSub" className={styles.ProfileFormSub}>
                             SAVE
                     </button>
                 </form>

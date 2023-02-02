@@ -12,9 +12,9 @@ const FormControl = (props) => {
 }
 
 export const TextArea = (props) => {
-    return <FormControl {...props}><textarea {...props}/></FormControl>
+    return <FormControl {...props}><textarea {...props} className={props.styles}/></FormControl>
 }
 
 export const Input = (props) => {
-    return <FormControl {...props}><input {...props}/></FormControl>
+    return <FormControl {...props}><input {...props} className={props.styles}/></FormControl>
 }

@@ -26,7 +26,13 @@ const ProfileInfo = ({saveProfile, ...props}) => {
     return (
         <div className={classes.profile__info}> 
             
-            <ProfileAvatarAndBtn photo={props.profile.photos.large} checkIsOwner={checkIsOwner} uploadPhoto={props.uploadPhoto}/>
+            <ProfileAvatarAndBtn 
+                photo={props.profile.photos.large} 
+                checkIsOwner={checkIsOwner} 
+                uploadPhoto={props.uploadPhoto}
+                editMode={editMode}
+                activateEditMode={() => {setEditMode(true)}}
+                />
 
             <div className={classes.profile__description}>
 
@@ -39,8 +45,6 @@ const ProfileInfo = ({saveProfile, ...props}) => {
                     /> : 
                     <ProfileData 
                         profile={props.profile} 
-                        checkIsOwner={checkIsOwner}
-                        activateEditMode={() => {setEditMode(true)}}
                     />
                 }
                 

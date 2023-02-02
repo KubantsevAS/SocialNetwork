@@ -1,0 +1,35 @@
+.ProfileFormSub {
+    display: none;
+}
+
+.mainInfo {
+    margin: 30px 0 10px;
+}
+
+.mainInfo__item {
+    margin-top: 20px;
+    position: relative;
+    border-bottom: 1px solid #cccccc;
+}
+
+.mainInfo__item::before {
+    content: attr(subscribe);
+    position: absolute;
+    top: -20px;
+    left: 0;
+    font-size: 12px;
+    padding: 2px;
+    font-weight: 200;
+    color: grey;
+}
+
+.input {
+    font-size: 20px;
+    font-weight: 400;
+    width: 100%;
+}
+
+.checkbox {
+    width: 20px;
+    height: 20px;
+}

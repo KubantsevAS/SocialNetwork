@@ -18,6 +18,17 @@ export default function ProfileAvatarAndBtn(props) {
                     <>
                         <label htmlFor='photoInp' className={styles.avatar__input}>Upload new photo</label>
                         <input id='photoInp' type={'file'} onChange={onMainPhotoSelected} className={styles.inputPhoto} />
+
+                        { !props.editMode ?
+                            <>
+                                <label htmlFor='edit' className={styles.avatar__input}>Edit my profile info</label>
+                                <input id='edit' onClick={props.activateEditMode} className={styles.inputPhoto} />
+                            </>
+                            : 
+                            <>
+                                <label htmlFor='ProfileFormSub' className={styles.avatar__input}>Save info</label>
+                            </>
+                        }
                     </>
                 }
             </div>
