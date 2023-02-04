@@ -1,14 +1,36 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { Form, Field } from 'react-final-form'
 import { composeValidators, maxLengthCreator, requiredField} from '../../../../utilities/validators/validators'
 import { Input, TextArea } from '../../../Common/FormControls/FormsControls'
 import { Contact } from '../ProfileInfo'
+import { FORM_ERROR } from 'final-form';
 import styles from './ProfileDataForm.module.css'
 
-export default function ProfileDataForm({profile, onSubmit}) {
-
-
+const ProfileDataForm = ({profile, formError, saveProfile, setEditMode}) => {
     
+    let [invalidFormat, setInvalidFormat] = useState(false)
+
+    console.log(formError);
+
+    const sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
+
+    // let state = {
+    //     errorText: formError,
+    //     invalidFormat: false
+    // }
+
+    const onSubmit = async (values) => {
+        saveProfile(values);
+        setEditMode(false); 
+
+        // await sleep(500);
+        // if (formError) {
+        //     return {[FORM_ERROR] : `${formError}`}
+        // } else {
+        //     setEditMode(false); 
+        // }   
+    }
+
     return (
         <Form
         onSubmit={onSubmit}
@@ -20,7 +42,7 @@ export default function ProfileDataForm({profile, onSubmit}) {
             contacts: profile.contacts
         }}
         >
-            {({ handleSubmit, submitting}) => (
+            {({ handleSubmit, submitting, submitError}) => (
                 <form onSubmit={handleSubmit}>
 
                     <div className={styles.mainInfo}>
@@ -63,20 +85,25 @@ export default function ProfileDataForm({profile, onSubmit}) {
                     </div>
                     
 
-
+                    {submitError && <div>{submitError}</div>}
                     
 
-                    <div>Contacts: {Object.keys(profile.contacts).map(key => {
+                    <div>Contacts:{Object.keys(profile.contacts).map(key => {
                         return (
                             <div>
-                                <Contact contactTitle={key} />
+                                <Contact contactTitle={key}/>
                                 <Field name={`contacts.${key}`} component={'input'} type={'text'} placeholder={key}/>
                             </div>
                             
                         )
                     })}
                     </div>
-                    <button type={"submit"} disabled={submitting} id="ProfileFormSub" className={styles.ProfileFormSub}>
+                    <button 
+                        type={"submit"} 
+                        disabled={submitting} 
+                        id="ProfileFormSub" 
+                        className={styles.ProfileFormSub}
+                        >
                             SAVE
                     </button>
                 </form>
@@ -84,3 +111,5 @@ export default function ProfileDataForm({profile, onSubmit}) {
         </Form>
     )
 }
+
+export default ProfileDataForm

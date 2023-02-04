@@ -13,6 +13,8 @@ const Profile = (props) => {
                 isOwner={props.isOwner}
                 uploadPhoto={props.uploadPhoto}
                 saveProfile={props.saveProfile}
+
+                formError={props.formError}
                 />
             <MyPostsContainer/>
             

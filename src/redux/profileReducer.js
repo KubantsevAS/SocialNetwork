@@ -5,6 +5,7 @@ const SET_USER_PROFILE = 'profile/SET_USER_PROFILE';
 const SET_USER_STATUS = 'profile/SET_USER_STATUS';
 const DELETE_POST = 'profile/DELETE_POST';
 const SAVE_PHOTO_SUCCESS = 'profile/SAVE_PHOTO_SUCCESS';
+const SET_FORMDATA_ERROR = 'SET_FORMDATA_ERROR';
 
 let initialState = {
     postsData: [
@@ -14,6 +15,7 @@ let initialState = {
     ],
     profile: null,
     status: "",
+    formError: false,
 }
 
 const profileReducer = (state = initialState, action) => {
@@ -43,6 +45,11 @@ const profileReducer = (state = initialState, action) => {
                 ...state,
                 profile: {...state.profile, photos: action.photos}
             }
+            case SET_FORMDATA_ERROR:
+                return {
+                    ...state,
+                    formError: action.formError,
+                }
         default:
             return state;
     }
@@ -53,7 +60,6 @@ const profileReducer = (state = initialState, action) => {
 
 // ACTION CREATORS
 
-
 export const setStatus = (status) => ({ type: SET_USER_STATUS, status });
 
 export const addPost = (newPostText) => ({ type: ADD_POST, newPostText });
@@ -63,6 +69,8 @@ export const deletePost = (postId) => ({ type: DELETE_POST, postId });
 export const setUserProfile = (profile) => ({ type: SET_USER_PROFILE, profile });
 
 export const savePhotoSuccess = (photos) => ({type: SAVE_PHOTO_SUCCESS, photos});
+
+const setFormErrorMessage = (formError) => ({type: SET_FORMDATA_ERROR, formError})
 
 export const getStatus = (userId) => async (dispatch) => {
     let response = await profileAPI.getStatus(userId);
@@ -87,7 +95,11 @@ export const saveProfile = (profile) => async (dispatch, getState) => {
     const userId = getState().auth.id;
     const response = await profileAPI.saveProfile(profile);
     if (response.data.resultCode === 0) {
+        dispatch(setFormErrorMessage(false));
         dispatch(getUserInfo(userId));
+        
+    } else {
+        dispatch(setFormErrorMessage(response.data.messages[0]));       
     }
 }
 

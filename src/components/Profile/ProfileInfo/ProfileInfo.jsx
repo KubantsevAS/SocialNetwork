@@ -11,10 +11,6 @@ const ProfileInfo = ({saveProfile, ...props}) => {
     let [editMode, setEditMode] = useState(false);
     
     
-    const onSubmit = async (values) => {
-        await saveProfile(values)
-        setEditMode(false);    
-    }
     
     let checkIsOwner;
     if (!props.profile) {
@@ -41,7 +37,9 @@ const ProfileInfo = ({saveProfile, ...props}) => {
                 {editMode ?  
                     <ProfileDataForm 
                         profile={props.profile}
-                        onSubmit={onSubmit}
+                        formError={props.formError}
+                        setEditMode={setEditMode}
+                        saveProfile={saveProfile}
                     /> : 
                     <ProfileData 
                         profile={props.profile} 

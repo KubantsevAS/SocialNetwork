@@ -18,7 +18,6 @@ class ProfileContainer extends React.Component {
 
     refreshProfile() {
         let userId = this.props.match.params.userId;
-        debugger;
         if (!userId) {
             
             userId = this.props.authorisedUserId;
@@ -53,6 +52,8 @@ class ProfileContainer extends React.Component {
                 status={this.props.status} 
                 updateStatus={this.props.updateStatus}
                 uploadPhoto={this.props.uploadPhoto}
+
+                formError={this.props.formError}
                 />
         );
     }
@@ -62,7 +63,9 @@ let mapStateToProps = (state) => ({
     profile: state.profilePage.profile,
     status: state.profilePage.status,
     authorisedUserId: state.auth.id,
-    login: state.auth.login
+    login: state.auth.login,
+
+    formError: state.profilePage.formError
 });
 
 
