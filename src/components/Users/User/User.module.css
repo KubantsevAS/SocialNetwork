@@ -14,8 +14,34 @@
     height: 100px;
     background-color: #CCCCCC;
     border: 1px solid #333333;
-    transition: background-color linear 0.1s;
-    transition: box-shadow linear 0.1s;
+    transition: background-color linear 0.2s;
+    transition: box-shadow linear 0.2s;
+}
+
+.userName {
+    font-weight: 900;
+    text-decoration: none;
+    color: #111;
+    font-size: 25px;
+}
+.userStatus {
+    font-weight: 400;
+    font-size: 25px;
+    padding: 5px 15px;
+    color: darkblue;
+}
+.userNameContainer {
+    width: fit-content;
+    padding: 5px 15px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    transition: background-color linear .2s;
+}
+.userNameContainer:hover {
+    background-color: rgb(200, 200, 200, 0.8);
+}
+.userNameContainer:active {
+    background-color: rgb(150, 150, 150, 0.8);
 }
 
 .userPhoto:hover {

@@ -14,7 +14,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #bbbbbb;
+    background-color: #ddd;
     cursor: pointer;
     min-width: 30px;
     padding: 5px;
@@ -24,6 +24,10 @@
 }
 .pageItem:hover {
     background-color:#cccccc;
+}
+
+.pageItem.btnLabel{
+    background-color: #bbb;
 }
 
 .pageItem:active {

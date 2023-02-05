@@ -1,8 +1,20 @@
 import React from 'react';
 import { Contact } from '../ProfileInfo';
 import styles from './ProfileData.module.css'
+import facebookIcon from './../../../../redux/images/icons/contacts/facebook.png'
+import websiteIcon from './../../../../redux/images/icons/contacts/website.png'
+import vkIcon from './../../../../redux/images/icons/contacts/vk.png'
+import twitterIcon from './../../../../redux/images/icons/contacts/twitter.png'
+import instagramIcon from './../../../../redux/images/icons/contacts/instagram.png'
+import youtubeIcon from './../../../../redux/images/icons/contacts/youtube.png'
+import githubIcon from './../../../../redux/images/icons/contacts/github.png'
+import mainLinkIcon from './../../../../redux/images/icons/contacts/mainLink.png'
+
 
 export default function ProfileData(props) {
+
+    let iconArr = [facebookIcon, websiteIcon, vkIcon, twitterIcon, instagramIcon, youtubeIcon, githubIcon, mainLinkIcon];
+
     return (
 
         <div>
@@ -27,12 +39,30 @@ export default function ProfileData(props) {
 
             </div>
 
-            <div>Contacts: 
-                {Object.keys(props.profile.contacts)
-                    .filter(key => props.profile.contacts[key] !== null && props.profile.contacts[key] !== '')
-                    .map(key => {
-                        return <Contact contactTitle={key} contactValue={props.profile.contacts[key]} />
-                    })}
+            <div>
+                <div className={styles.contactsHeader}>My contacts:</div>
+                <div className={styles.contactsContainer}>
+                    {Object.keys(props.profile.contacts)
+                        .filter(key => props.profile.contacts[key] !== null && props.profile.contacts[key] !== '')
+                        .length 
+                            ? Object.keys(props.profile.contacts)
+                                .map((key, index) => {
+                                    if (props.profile.contacts[key] === null || props.profile.contacts[key] === '') {
+                                        return false
+                                    }
+                                    return (
+                                        <a href={props.profile.contacts[key]} target='_blank'>
+                                            <img src={iconArr[index]} alt={props.profile.contacts[key]} className={styles.contactIcon}></img>
+                                            {/* <Contact contactTitle={key} contactValue={props.profile.contacts[key]} /> */}
+                                        </a>
+                                        
+                                    )
+                                })
+                            : <div className={styles.emptyContacts}>No contacts available...</div>
+                    }
+                </div>
+                
+
             </div>
         </div>
     )

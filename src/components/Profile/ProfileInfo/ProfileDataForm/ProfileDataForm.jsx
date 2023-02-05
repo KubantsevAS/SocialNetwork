@@ -87,15 +87,23 @@ class ProfileDataForm extends React.Component {
                         </div>
 
 
-                        {submitError && <div>{submitError}</div>}
+                        {submitError && <div className={styles.contactsError}>{submitError}</div>}
 
 
-                        <div>Contacts:{Object.keys(this.props.profile.contacts).map(key => {
-                            return (
-                                <div>
-                                    <Contact contactTitle={key} />
-                                    <Field name={`contacts.${key}`} component={'input'} type={'text'} placeholder={key} />
-                                </div>
+                        <div>
+                            <div className={styles.contactsHeader}>Contacts:</div>
+                            {Object.keys(this.props.profile.contacts).map(key => {
+                                return (
+                                    <div className={styles.contactContainer}>
+                                        <Contact contactTitle={key[0].toUpperCase() + key.slice(1)} />
+                                        <Field 
+                                            name={`contacts.${key}`} 
+                                            component={'input'} 
+                                            type={'text'} 
+                                            placeholder={'Link...'}
+                                            className={styles.contactField}
+                                            />
+                                    </div>
 
                             )
                         })}

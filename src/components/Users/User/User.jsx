@@ -28,8 +28,13 @@ const User = (props) => {
 
                     <span>
                         <span>
-                            <div>Name: {user.name}</div>
-                            <div>Status: {user.status}</div>
+
+                            <NavLink to={'/profile/' + user.id} className={styles.userName}>
+                                <div className={styles.userNameContainer}>{user.name}</div>
+                            </NavLink>
+
+                            <div className={styles.userStatus}>{user.status || 'No status'}</div>
+
                         </span>
                     </span>
                 </div>)

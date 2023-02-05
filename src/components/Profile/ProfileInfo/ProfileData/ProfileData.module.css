@@ -18,3 +18,37 @@
     font-weight: 200;
     color: grey;
 }
+
+.contactsHeader{
+    font-size: 30px;
+    margin: 10px 0;
+    font-weight: 900;
+}
+
+.contactIcon {
+    height: 35px;
+    width: 35px;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 10px;
+    transition: background-color linear .2s;
+}
+
+.contactsContainer{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contactIcon:hover{
+    background-color: #bbb;
+}
+
+.contactIcon:active{
+    background-color: #888;
+}
+
+.emptyContacts {
+    color: gray;
+    font-size: 25px;
+    font-weight: 900;
+}

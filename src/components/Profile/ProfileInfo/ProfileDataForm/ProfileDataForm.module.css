@@ -26,10 +26,44 @@
 .input {
     font-size: 20px;
     font-weight: 400;
+    padding: 3px;
     width: 100%;
+    border-radius: 1px;
+    border: 1px solid #cccccc;
+}
+.input:focus{
+    outline: 2px solid #40C057;
 }
 
 .checkbox {
     width: 30px;
     height: 30px;
+}
+
+.contactContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.contactField {
+    height: 25px;
+    font-size: 16px;
+    border: 1px solid #cccccc;
+    border-radius: 1px;
+    padding: 3px 5px;
+}
+.contactField:focus{
+    outline: 2px solid #40C057;
+}
+
+.contactsHeader{
+    font-size: 30px;
+    margin: 10px 0;
+    font-weight: 900;
+}
+
+.contactsError {
+    color: red;
 }

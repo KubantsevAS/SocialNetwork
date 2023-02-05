@@ -14,7 +14,7 @@ const PrintMessage = (props) => {
         <Form
             onSubmit={addNewMessage}
         >
-            {({ handleSubmit, submitting }) => (
+            {({ handleSubmit, submitting, form }) => (
                 <form
                     onSubmit={handleSubmit}
 
@@ -37,6 +37,7 @@ const PrintMessage = (props) => {
                                 id={"post"}
                                 type={"submit"}
                                 disabled={submitting}
+                                onClick={() => setTimeout(form.reset, 100)}
                             >
                                 Submit
                             </button>

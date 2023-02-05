@@ -7,7 +7,7 @@ const FormControl = (props) => {
     return (
         <span className={styles.formControl + " " + (hasError ? styles.error : "")}>
             <>{props.children}</>
-            {hasError && <span>{props.meta.error || props.meta.submitError}</span>}
+            {hasError && <span className={styles.oldErrorText}>*{props.meta.error || props.meta.submitError}</span>}
         </span>
     )
 }

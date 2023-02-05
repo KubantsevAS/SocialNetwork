@@ -10,20 +10,20 @@ const Paginator = ({ currentPage, onPageChanged, totalUsersCount, pageSize, port
     }
 
     let portionCount = Math.ceil(pagesCount / portionSize);
-    let [portionNumber, setPortionNumber] = useState(1);
+    let [portionNumber, setPortionNumber] = useState(Math.ceil(currentPage / 10));
     let leftPortionPageNumber = (portionNumber - 1) * portionSize + 1;
     let rightPortionPageNumber = portionNumber * portionSize;
 
     return (
         <div className={styles.pages}>
             {portionNumber > 1 &&
-                <label htmlFor='sprev' className={styles.pageItem}>{"<<"}
+                <label htmlFor='sprev' className={styles.pageItem + " " + styles.btnLabel}>{"<<"}
                     <button id="sprev" onClick={() => { setPortionNumber(portionNumber = 1) }} className={styles.btn}></button>
                 </label>
             }
 
             {portionNumber > 1 &&
-                <label htmlFor='prev' className={styles.pageItem}>{"< prev"}
+                <label htmlFor='prev' className={styles.pageItem + " " + styles.btnLabel}>{"< prev"}
                     <button id="prev" onClick={() => { setPortionNumber(portionNumber - 1) }} className={styles.btn}></button>
                 </label>
             }
@@ -41,13 +41,13 @@ const Paginator = ({ currentPage, onPageChanged, totalUsersCount, pageSize, port
                 })}
 
             {portionNumber < portionCount &&
-                <label htmlFor='next' className={styles.pageItem}>{"next >"}
+                <label htmlFor='next' className={styles.pageItem + " " + styles.btnLabel}>{"next >"}
                     <button id="next" onClick={() => { setPortionNumber(portionNumber + 1) }} className={styles.btn}></button>
                 </label>
             }
 
             {portionNumber < portionCount &&
-                <label htmlFor='snext' className={styles.pageItem}>{">>"}
+                <label htmlFor='snext' className={styles.pageItem + " " + styles.btnLabel}>{">>"}
                     <button id="snext" onClick={() => { setPortionNumber(portionNumber = portionCount) }} className={styles.btn}></button>
                 </label>
             }

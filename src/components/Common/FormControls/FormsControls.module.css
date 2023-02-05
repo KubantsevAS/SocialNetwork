@@ -35,6 +35,10 @@
     top: 55px;
     left: 50%;
 }
+.oldErrorText{
+    display: block;
+    font-size: 20px;
+}
 
 .formControl.error textarea {
     color: black;
