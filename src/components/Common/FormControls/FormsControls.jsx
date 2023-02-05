@@ -24,14 +24,15 @@ export const Input = (props) => {
 export const createInput = (props) => {
     return <Field name={props.name} validate={props.validators}>
             {({ input, meta }) => (
-                <div>
+                <div className={styles.inputFieldContainer}>
+                    <img src={props.icon} alt={"icon"} className={styles.inputIcon}></img>
                     <input
                         {...input}
                         type={props.type}
-                        placeholder={props.placeholder}
-                        className={meta.error && meta.touched ? styles.inputNew : ''} 
+                        placeholder={props.placeholder || meta.error}
+                        className={styles.inputNew + " " + (meta.error && meta.touched ? styles.inputNewErr : '')} 
                     />
-                    {meta.error && meta.touched && <span className={styles.errorText}>{meta.error}</span>}
+                    {meta.error && meta.touched && <div className={styles.errorText}>*{meta.error}</div>}
                 </div>
             )}
 

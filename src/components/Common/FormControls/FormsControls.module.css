@@ -1,9 +1,39 @@
-.inputNew{
+.inputFieldContainer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputIcon {
+    margin-right: 20px;
+    height: 35px;
+}
+.inputNew {
+    color: black;
+    background-color: #EEEEEE;
+    font-size: 20px;
+    padding: 15px;
+    box-sizing: border-box;
+    height: 40px;
+    width: 250px;
+    margin: 15px 0;
+    border: 0;
+}
+.inputNew:focus{
+    outline: 3px solid #40C057;
+}
+.inputNewErr{   
     border: 1px solid red;
     color: red;
 }
 .errorText{
+    font-weight: 900;
+    font-size: 16px;
     color: red;
+    position: absolute;
+    top: 55px;
+    left: 50%;
 }
 
 .formControl.error textarea {
