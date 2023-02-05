@@ -1,4 +1,10 @@
-
+.inputNew{
+    border: 1px solid red;
+    color: red;
+}
+.errorText{
+    color: red;
+}
 
 .formControl.error textarea {
     color: black;

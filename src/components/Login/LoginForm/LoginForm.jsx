@@ -1,6 +1,6 @@
 import React from 'react';
 import { Form, Field } from 'react-final-form'
-import { Input } from '../../Common/FormControls/FormsControls';
+import { Input, createInput } from '../../Common/FormControls/FormsControls';
 import { requiredField, maxLengthCreator, composeValidators } from '../../../utilities/validators/validators'
 import { FORM_ERROR } from 'final-form';
 import styles from './LoginForm.module.css'
@@ -12,13 +12,12 @@ const LoginForm = (props) => {
     const sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
     
     const onSubmit = async values => {
-        props.login(values.login, values.password, values.rememberMe)
+        props.login(values.login, values.password, values.rememberMe, values.captcha)
         await sleep(500)
         if (!props.errorMessage) {
             return {[FORM_ERROR] : `Try another email`}
         }
     }
-
     return (
         <Form
             onSubmit={onSubmit}
@@ -26,27 +25,38 @@ const LoginForm = (props) => {
             {({ handleSubmit, pristine, form, submitting, submitError }) => (
                 <form onSubmit={handleSubmit}>
                     <div>
-                        <Field placeholder={"Login"} component={'input'} name={"login"} validate={composeValidators(requiredField, maxLengthCreator(22))}>
-                            {({ input, meta }) => (
-                                <div>
-                                    <Input {...input} meta={meta} type="text" placeholder={"Email"} />
-                                </div>
-                            )}
-                        </Field>
-                    </div>
-                    <div>
-                        <Field placeholder={"Password"} component={"input"} name={"password"} validate={composeValidators(requiredField, maxLengthCreator(22))}>
-                            {({ input, meta }) => (
-                                <div>
-                                    <Input {...input} meta={meta} type="password" placeholder={"Password"} />
-                                </div>
-                            )}
-                        </Field>
+                        {createInput({
+                            name:"login", 
+                            type:"text", 
+                            placeholder:"Email", 
+                            validators:composeValidators(requiredField, maxLengthCreator(22))
+                            })
+                        }
+                        {createInput({
+                            name:"password", 
+                            type:"password", 
+                            placeholder:"Password", 
+                            validators:composeValidators(requiredField, maxLengthCreator(22))
+                            })
+                        }
                     </div>
                     <div>
                         <Field type={"checkbox"} component={"input"} name={"rememberMe"} /> Remember Me
                     </div>
                     <div>
+
+                        {props.captchaUrl && <img src={props.captchaUrl} />}
+                        {props.captchaUrl &&
+                            createInput({
+                                name:"captcha", 
+                                type:"text", 
+                                placeholder: "Enter captcha", 
+                                validators: composeValidators(requiredField, maxLengthCreator(22))
+                                })
+                            
+                        }
+
+
                         {submitError && <div className={styles.error}>{submitError}</div>}
                         <button type={"submit"} disabled={submitting}>
                             Login

@@ -10,14 +10,14 @@ export default function ProfileData(props) {
 
             <div className={styles.mainInfo}>
                 <div className={styles.mainInfo__item} subscribe='Full Name'>
-                    {props.profile.fullName}
+                    <b>{props.profile.fullName}</b>
                 </div>
                 <div className={styles.mainInfo__item} subscribe='About Me'>
                     {props.profile.aboutMe || 'No info'}
                 </div>
 
                 <div className={styles.mainInfo__item} subscribe='Job Status'>
-                    {props.profile.lookingForAJob ? "Looking for a job" : "Not looking for a job"}
+                    {props.profile.lookingForAJob ? <>Looking for a job: <b>YES</b></> : <>Looking for a job: <b>NO</b></>}
                 </div>
                 {props.profile.lookingForAJob &&
                     <div className={styles.mainInfo__item} subscribe='My Professional Skills'>

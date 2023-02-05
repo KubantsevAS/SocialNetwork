@@ -3,11 +3,13 @@
     flex-direction: row;
     margin: 10px 0 40px;
     text-align: center;
-    font-size: 20px;
+    
     justify-content: center;
 }
 
 .pageItem {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 20px;
     margin: 0 5px;
     display: flex;
     align-items: center;
@@ -34,6 +36,7 @@
 }
 
 .selectedPage {
+    font-size: 20px;
     font-weight: bold;
     margin: 0 7px;
     background-color: #65d279;

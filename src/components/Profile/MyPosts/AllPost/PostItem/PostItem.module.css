@@ -1,27 +1,44 @@
 .Like {
     font-size: 20px;
     font-weight: bold;
-    background-color: greenyellow;
-    color: black;
     cursor: pointer;
     width: 50px;
     height: 35px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 40px;
+    border-radius: 15px;
+    background-color: #40C057;
+    font-weight: 400;
+    box-shadow: 0 2px 3px #555555;
+    margin-left: 5px;
 }
+.Like:hover {
+    background-color: lightgreen;
+}
+
+.Like:active {
+    transform: translateY(2px);
+    background-color: #2e9441;
+}
+
 .LikeButton {
     display: none;
 }
 .LikeNumber {
-    font-size: 25px;
-    background-color: greenyellow;
+    font-size: 20px;
     border-radius: 50%;
     width: 35px;
     height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
+    background-color: #40C057;
+    font-weight: 400;
+    box-shadow: 0 2px 3px #555555
 }
+
 .LikePanel {
     display: flex;
     align-items: center;
@@ -34,9 +51,8 @@
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background-image: url('Avatar2.jpg');
-    background-size: cover;
-    background-position: center;
+    background-color: #CCCCCC;
+    border: 1px solid #333333;
 }
 
 .PostItem {
@@ -56,8 +72,7 @@
 }
 
 .PostOwner {
-    color: black;
-    font-weight: bold;
+    font-weight: 900;
     font-size: 15px;
     
 }

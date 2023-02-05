@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import Preloader from '../../Common/Preloader/Preloader';
+import { Navigate } from 'react-router-dom'
 import classes from './ProfileInfo.module.css'
 import ProfileStatusWithHooks from './ProfileStatusWithHooks/ProfileStatusWithHooks';
 import ProfileDataForm from './ProfileDataForm/ProfileDataForm';
@@ -14,7 +15,7 @@ const ProfileInfo = ({saveProfile, ...props}) => {
     
     let checkIsOwner;
     if (!props.profile) {
-        return <Preloader />
+        return <Navigate to={'/profile/' + props.isOwner}/>
     } else {
         checkIsOwner = props.isOwner === props.profile.userId;
     }

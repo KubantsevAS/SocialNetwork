@@ -33,6 +33,21 @@ class ProfileDataForm extends React.Component {
         }
     }
 
+    makeField(name, subscribe, placeholder) {
+        return (
+            <div className={styles.mainInfo__item} subscribe={subscribe}>
+                <Field component={'input'} name={name} validate={composeValidators(requiredField)}>
+                    {({ input, meta }) => (
+                        <div>
+                            <Input {...input} meta={meta} type="text" placeholder={placeholder} styles={styles.input} />
+                        </div>
+                    )}
+                </Field>
+            </div>
+        )
+    }
+
+
     render() {
 
         return (
@@ -51,40 +66,23 @@ class ProfileDataForm extends React.Component {
 
                         <div className={styles.mainInfo}>
 
-                            <div className={styles.mainInfo__item} subscribe='Full Name'>
-                                <Field component={'input'} name={"fullName"} validate={composeValidators(requiredField)}>
-                                    {({ input, meta }) => (
-                                        <div>
-                                            <Input {...input} meta={meta} type="text" placeholder={"fullName"} styles={styles.input} />
-                                        </div>
-                                    )}
-                                </Field>
-                            </div>
-
-                            <div className={styles.mainInfo__item} subscribe='About Me'>
-                                <Field component={'input'} name={"aboutMe"} validate={composeValidators(requiredField)}>
-                                    {({ input, meta }) => (
-                                        <div>
-                                            <Input {...input} meta={meta} type="text" placeholder={"About me"} styles={styles.input} />
-                                        </div>
-                                    )}
-                                </Field>
-                            </div>
-
+                            {this.makeField('fullName', 'Full Name', 'fullName')}
+                            {this.makeField('aboutMe', 'About Me', 'aboutMe')}
+                            
                             <div className={styles.mainInfo__item} subscribe='Job Status'>
-                                <Field name="lookingForAJob" component="input" type="checkbox" className={styles.chekbox} />
+                                <label>Looking for a job: </label> 
+                                <Field name='lookingForAJob' component="input" type='checkbox' className={styles.checkbox}/>
                             </div>
-
-                            <div className={styles.mainInfo__item} subscribe='My Professional Skills'>
-                                <Field component={'input'} name={"lookingForAJobDescription"} validate={composeValidators(requiredField)}>
+                            
+                            <div className={styles.mainInfo__item} subscribe={'My Professional Skills'}>
+                                <Field component={'input'} name={'lookingForAJobDescription'} validate={composeValidators(requiredField)}>
                                     {({ input, meta }) => (
                                         <div>
-                                            <TextArea {...input} meta={meta} type="text" placeholder={"skills"} styles={styles.input} />
+                                            <TextArea {...input} meta={meta} type="text" placeholder={'skills'} styles={styles.input} />
                                         </div>
                                     )}
                                 </Field>
                             </div>
-
 
                         </div>
 

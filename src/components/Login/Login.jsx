@@ -12,7 +12,7 @@ const Login = (props) => {
     return (
         <div>
             <h1>Login</h1>
-            <LoginFrom login={props.login} errorMessage={props.errorMessage}/>
+            <LoginFrom login={props.login} errorMessage={props.errorMessage} captchaUrl={props.captchaUrl}/>
         </div>
 
     )
@@ -21,7 +21,8 @@ const Login = (props) => {
 const mapDispatchToProps = (state) => ({
     isAuth: state.auth.isAuth,
     id: state.auth.id,
-    errorMessage : state.auth.errorMessage
+    errorMessage : state.auth.errorMessage,
+    captchaUrl : state.auth.captchaUrl
 })
 
 export default connect (mapDispatchToProps, {login}) (Login)

@@ -1,5 +1,6 @@
 import {React, useState} from 'react';
 import classes from './PostItem.module.css'
+import defAva from './../../../../../redux/images/avatars/AvaDefault.png'
 
 const PostItem = (props) => {
     
@@ -8,15 +9,23 @@ const PostItem = (props) => {
         setLikeCounter(likeCounter => likeCounter + 1)
     };
 
+    let name, ava;
+    if (!props.profile) {
+        name = 'Default User';
+        ava = defAva;
+    } else {
+        name = props.profile.fullName;
+        ava = props.profile.photos.small
+    }
     return (
         <div className={classes.PostItem}>
             <div className={classes.PostUpperPart}>
                 
-                <div className={classes.postAvatar}></div>
+                <img src={ava || defAva} className={classes.postAvatar}></img>
 
 
                 <div className={classes.PostInner}>
-                    <div className={classes.PostOwner}>Mr Pugles</div>
+                    <div className={classes.PostOwner}>{name}</div>
                     <div className={classes.PostText}>{props.message}</div>
                 </div>
 
