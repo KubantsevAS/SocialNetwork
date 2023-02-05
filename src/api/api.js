@@ -75,6 +75,10 @@ export const authAPI = {
     getLogin () {
         return  instance.get(`auth/me`);
     },
+
+    getProfile (userId) {
+        return  profileAPI.getProfile(userId)    
+    }
 }
 
 export const friendsAPI = {

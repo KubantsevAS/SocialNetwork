@@ -6,6 +6,8 @@ import login from '../../redux/images/icons/login1.png'
 
 const MyProfileBlock = (props) => {
 
+    let userPhoto = props.userPhoto || defAva;
+
     let linkNav, text;
     if (props.isAuth) {
         [linkNav, text] = [`/profile/${props.id}`, props.login];
@@ -17,7 +19,7 @@ const MyProfileBlock = (props) => {
         <div className={styles.myInfo}>
             <NavLink to={linkNav} className={styles.myLinkCommon}>
                 <div className={styles.photoField}>
-                    <img className={props.isAuth? styles.userPhoto :styles.loginPhoto} alt={props.id} src={props.isAuth ? defAva : login}></img>
+                    <img className={props.isAuth? styles.userPhoto :styles.loginPhoto} alt={props.id} src={props.isAuth ? userPhoto : login}></img>
                 </div>
                 <div className={styles.loginTextInner}>{text}
                 </div>

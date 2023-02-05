@@ -3,6 +3,8 @@ import { usersAPI, authAPI, securityAPI } from './../api/api'
 const SET_USER_DATA = 'auth/SET_USER_DATA'
 const SET_ERROR = "auth/SET_ERROR"
 const GET_CAPTCHA_URL_SUCCESS = 'GET_CAPTCHA_URL_SUCCESS'
+const SET_USER_PHOTO = 'auth/SET_USER_PHOTO'
+
 
 let initialState = {
     id: null,
@@ -10,7 +12,8 @@ let initialState = {
     login: null,
     isAuth: false,
     errorMessage: false,
-    captchaUrl: null        // if null, then captcha is not required
+    captchaUrl: null,        // if null, then captcha is not required
+    userPhoto: null
 };
 
 const authReducer = (state = initialState, action) => {
@@ -30,11 +33,18 @@ const authReducer = (state = initialState, action) => {
                 ...state,
                 ...action.payload
             }
+        case SET_USER_PHOTO:
+            return {
+                ...state,
+                ...action.payload
+            }
         default:
             return state;
     }
 }
 
+
+const setUserPhoto = (userPhoto) => ({type: SET_USER_PHOTO, payload: {userPhoto}})
 
 export const setErrorMessage = () => ({ type: SET_ERROR, errorMessage: true })
 export const setAuthUserData = (id, email, login, isAuth, errorMessage, captchaUrl) => ({ type: SET_USER_DATA, payload: { id, email, login, isAuth, errorMessage, captchaUrl } });
@@ -76,6 +86,11 @@ export const getCaptchaUrl = () => async dispatch => {
     const response = await securityAPI.getCaptchaUrl();
     const captchaUrl = response.data.url;
     dispatch(getCaptchaUrlSuccess(captchaUrl))
+}
+
+export const getUserPhoto = (userId) => async dispatch => {
+    const response = await authAPI.getProfile(userId)
+    dispatch(setUserPhoto(response.data.photos.large))
 }
 
 export default authReducer;

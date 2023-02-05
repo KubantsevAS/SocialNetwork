@@ -11,8 +11,6 @@ const ProfileInfo = ({saveProfile, ...props}) => {
 
     let [editMode, setEditMode] = useState(false);
     
-    
-    debugger
     let checkIsOwner;
     if (props.isOwner === null && !props.profile) {
         return <Preloader/>
