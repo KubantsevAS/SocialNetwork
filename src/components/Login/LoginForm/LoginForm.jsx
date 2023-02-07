@@ -1,6 +1,6 @@
 import React from 'react';
 import { Form, Field } from 'react-final-form'
-import { Input, createInput } from '../../Common/FormControls/FormsControls';
+import { createInput } from '../../Common/FormControls/FormsControls';
 import { requiredField, maxLengthCreator, composeValidators } from '../../../utilities/validators/validators'
 import { FORM_ERROR } from 'final-form';
 import styles from './LoginForm.module.css'

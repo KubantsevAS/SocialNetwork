@@ -21,15 +21,22 @@
     border: 0;
     border-radius: 3px;
 }
+
 .inputNew:focus{
     outline: 2px solid #40c057;
     box-shadow: 0 0 10px #40C057;
 }
+
+.inputNew:hover{
+    box-shadow: 0 0 10px #40C057;
+}
+
 .inputNewErr{   
     outline: 2px solid red;
     box-shadow: 0 0 10px red;
     color: red;
 }
+
 .errorText{
     font-weight: 900;
     font-size: 16px;
@@ -38,6 +45,7 @@
     top: 55px;
     left: 50%;
 }
+
 .oldErrorText{
     display: block;
     font-size: 20px;
@@ -47,10 +55,12 @@
     outline: 1px solid red;
     box-shadow: 0 0 10px red;
 }
+
 .formControl.error input {
     outline: 1px solid red;
     box-shadow: 0 0 10px red;
 }
+
 .formControl.error span {
     color: red;
 }

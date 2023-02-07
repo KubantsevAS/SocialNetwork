@@ -1,5 +1,6 @@
 import React from 'react';
 import PostItem from './PostItem/PostItem';
+import styles from './AllPosts.module.css';
 
 const AllPosts = (props) => {
 
@@ -11,7 +12,7 @@ const AllPosts = (props) => {
 
 
     return (
-        <div className='AllPosts'>
+        <div className={styles.allPosts}>
 
             {postDataTags}
             

@@ -1,16 +1,16 @@
 .Like {
-    font-size: 20px;
+    font-size: 16px;
     font-weight: bold;
     cursor: pointer;
     width: 50px;
-    height: 35px;
+    height: 25px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 15px;
+    border-radius: 5px;
     background-color: #40C057;
     font-weight: 400;
-    box-shadow: 0 2px 3px #555555;
+    box-shadow: 0 1px 3px gray;
     margin-left: 5px;
 }
 .Like:hover {
@@ -26,53 +26,60 @@
     display: none;
 }
 .LikeNumber {
-    font-size: 20px;
-    border-radius: 50%;
+    font-size: 16px;
+    border-radius: 5px;
     width: 35px;
-    height: 35px;
+    height: 25px;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     background-color: #40C057;
     font-weight: 400;
-    box-shadow: 0 2px 3px #555555
+    box-shadow: 0 1px 3px gray;
 }
 
 .LikePanel {
     display: flex;
     align-items: center;
-    width: 80%;
-    margin-left: 70px;
     justify-content: flex-end;
+    margin: 10px 50px;
 }
 
 .postAvatar {
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
     background-color: #CCCCCC;
     border: 1px solid #333333;
+    margin: 10px;
+    align-self: center;
 }
 
 .PostItem {
-    margin: 20px 0;
+    background-color: #eee;
+    border-bottom: 1px solid #ccc;
+}
+.PostItem:last-child {
+    border-bottom: 0;
 }
 
-.PostUpperPart {
+.postInner {
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+.postUpperPart {
     display: flex;
-    margin-bottom: 10px;
-}
-
-.PostInner {
-    margin-left: 20px;
-    width: 80%;
-    padding-left: 10px;
-    background-color: gainsboro;
 }
 
 .PostOwner {
     font-weight: 900;
-    font-size: 15px;
-    
+    font-size: 18px; 
+}
+.PostText {
+    margin-top: 10px;
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 0.5px;
 }

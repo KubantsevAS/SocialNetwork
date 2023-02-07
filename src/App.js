@@ -50,13 +50,9 @@ class App extends React.Component {
           <Suspense fallback={<div>Loading...</div>}>
             <Routes>
 
-
               <Route path='/dialogs' element={<DialogsContainer />} />
 
-              <Route path='/profile/:userId'
-                element={<ProfileContainer/>} 
-              />
-
+              <Route path='/profile/:userId' element={<ProfileContainer/>} />
 
               <Route path='/news' element={<News />} />
               <Route path='/music' element={<Music />} />
@@ -84,7 +80,7 @@ const mapStatetoProps = (state) => ({
 })
 
 let AppContainer = compose(
-  withRouter,
+  //withRouter,
   connect(mapStatetoProps, { initializeApp }))(App);
 
 let MainApp = () => {

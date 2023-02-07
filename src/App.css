@@ -22,10 +22,9 @@
     padding: 10px 40px;
     border-radius: 15px;
     background-color: #f2f2f2;
-
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1220px) {
     .app-wrapper {
         grid-template-columns: 2fr 7fr;
         min-width: 800px;
@@ -34,11 +33,14 @@
 
 @media (max-width: 700px) {
     .app-wrapper {
-    grid-template-areas: 
-    "n"
-    "c";
-    grid-template-rows: 550px 3fr;
-    min-width: 100vw;
-    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    min-width: 350px;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 14px;
+    }
+    .app-wrapper-content {
+        padding: 10px;
     }
 }

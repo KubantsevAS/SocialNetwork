@@ -12,6 +12,10 @@
     box-shadow: 0 0 5px #40C057;
 }
 
+.textarea:hover {
+    box-shadow: 0 0 5px #40C057;
+}
+
 .newPostForm {
     background-color: #eee;
     width: fit-content;
@@ -81,4 +85,12 @@
     position: absolute;
     left: 15px;
     bottom: -20px;
+}
+
+@media (max-width: 700px) {
+    .textarea {
+        width: 320px;
+        font-size: 14px;
+        margin: 5px 10px;
+    }
 }
