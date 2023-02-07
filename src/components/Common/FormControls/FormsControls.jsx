@@ -7,13 +7,13 @@ const FormControl = (props) => {
     return (
         <span className={styles.formControl + " " + (hasError ? styles.error : "")}>
             <>{props.children}</>
-            {hasError && <span className={styles.oldErrorText}>*{props.meta.error || props.meta.submitError}</span>}
+            {hasError && <span className={props.errorStyle || styles.oldErrorText}>*{props.meta.error || props.meta.submitError}</span>}
         </span>
     )
 }
 
 export const TextArea = (props) => {
-    return <FormControl {...props}><textarea {...props} className={props.styles} /></FormControl>
+    return <FormControl {...props}><textarea {...props} className={props.styles}/></FormControl>
 }
 
 export const Input = (props) => {

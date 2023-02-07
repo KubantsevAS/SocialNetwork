@@ -18,8 +18,27 @@
 
 .app-wrapper-content {
     grid-area: c;
-    margin: 0 30px;
-    padding: 10px;
+    margin: 0;
+    padding: 10px 40px;
     border-radius: 15px;
+    background-color: #f2f2f2;
 
+}
+
+@media (max-width: 1200px) {
+    .app-wrapper {
+        grid-template-columns: 2fr 7fr;
+        min-width: 800px;
+    }
+}
+
+@media (max-width: 700px) {
+    .app-wrapper {
+    grid-template-areas: 
+    "n"
+    "c";
+    grid-template-rows: 550px 3fr;
+    min-width: 100vw;
+    min-height: 0;
+    }
 }

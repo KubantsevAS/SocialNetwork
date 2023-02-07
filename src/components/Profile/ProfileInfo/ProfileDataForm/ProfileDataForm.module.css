@@ -28,11 +28,13 @@
     font-weight: 400;
     padding: 3px;
     width: 100%;
-    border-radius: 1px;
+    border-radius: 2px;
     border: 1px solid #cccccc;
+    resize: none;
 }
 .input:focus{
-    outline: 2px solid #40C057;
+    outline: 1px solid #40C057;
+    box-shadow: 0 0 10px #40C057;
 }
 
 .checkbox {
@@ -51,11 +53,12 @@
     height: 25px;
     font-size: 16px;
     border: 1px solid #cccccc;
-    border-radius: 1px;
+    border-radius: 2px;
     padding: 3px 5px;
 }
 .contactField:focus{
-    outline: 2px solid #40C057;
+    outline: 1px solid #40C057;
+    box-shadow: 0 0 10px #40C057;
 }
 
 .contactsHeader{
