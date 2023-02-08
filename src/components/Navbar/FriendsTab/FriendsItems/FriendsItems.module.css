@@ -1,9 +1,0 @@
-.friendsPanel {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.title {
-    margin: 10px 0;
-}

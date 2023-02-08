@@ -53,16 +53,15 @@
 @media (max-width: 700px) {
     .nav {
         font-size: 14px;
-        /* position: sticky;
-        top: 0;
-        z-index: 100; */
+        z-index: 100;
     }
     .navLinks{
         display: flex;
         justify-content: space-around; 
         position: sticky; 
         top: 0;
-        background-color: #333333
+        z-index: 100;
+        background-color: #333333;
     }
     .itemGlob {
         padding: 2px 0;
@@ -72,4 +71,16 @@
         margin-right: 5px;
         height: 20px;
     }
+    .mobileAdj {
+        display: none;
+    }
 }
+
+@media (max-width: 420px) {
+    .imgIcon{
+        width: 15px;
+        height: 15px;
+        margin-left: 5px;
+        margin-right: 2px;
+    }
+} 

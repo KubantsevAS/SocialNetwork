@@ -1,5 +1,5 @@
 .searchBlock {
-    width: 500px;
+    width: fit-content;
     margin: 5px auto 20px;
 }
 
@@ -53,31 +53,77 @@
 }
 
 .friendsItemsInner {
-    flex-wrap: wrap;
-    display: flex;
+    display: block;
 }
+
 .friendItem {
     display: flex;
     padding: 20px;
-    font-size: 20px;
-    width: 45%;
-    border: 1px solid #555555;
+    font-size: 25px;
 }
 
 .friendPhoto {
     border-radius: 50%;
+    margin-right: 15px;
     width: 100px;
     height: 100px;
     background-color: #CCCCCC;
-    margin-right: 15px;
     border: 1px solid #333333;
+    transition: background-color linear 0.2s;
+    transition: box-shadow linear 0.2s;
 }
-.userName{
-    font-weight: bold;
-    font-size: 25px;
+
+.friendPhoto:hover {
+    background-color: #DDDDDD;
+    box-shadow: 0 0 7px black;
 }
+.friendPhoto:active {
+    background-color: #AAAAAA;
+    box-shadow: 0 0 7px black;
+}
+
 .friendDescr {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+}
+
+.userName {
+    font-weight: 900;
+    text-decoration: none;
+    color: #111;
+}
+
+.userStatus {
+    font-weight: 400;
+    padding: 5px 15px;
+    color: darkblue;
+}
+
+.userNameContainer {
+    width: fit-content;
+    padding: 5px 15px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    transition: background-color linear .2s;
+}
+.userNameContainer:hover {
+    background-color: rgb(200, 200, 200, 0.8);
+}
+.userNameContainer:active {
+    background-color: rgb(150, 150, 150, 0.8);
+}
+
+@media (max-width: 700px) {
+    .friendItem {
+        display: flex;
+        padding: 5px;
+        font-size: 20px;
+    }
+    .friendsPage {
+        overflow: hidden;
+    }
+    .friendPhoto {
+        margin-right: 5px;
+    }
 }

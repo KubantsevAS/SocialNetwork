@@ -24,6 +24,7 @@
     padding: 12px;
     cursor: pointer;
     border-radius: 15px;
+    overflow-wrap: break-word;
 }
 
 .statusInner:hover {
@@ -62,4 +63,14 @@
     opacity: 1;
     bottom: -1em;
     right: -1em;
+}
+
+@media (max-width: 500px) {
+    .statusInner {
+        max-width: 200px;
+        padding:  5px;
+    }
+    .statusContainer {
+        padding: 5px;
+    }
 }

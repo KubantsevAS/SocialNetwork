@@ -12,13 +12,14 @@ export default function Friends(props) {
                 <h2 className={styles.totalCount}>
                     Friends total number: {props.users.length}
                 </h2>
-                <div className={styles.inputSearch}>
+
+                {/* <div className={styles.inputSearch}>
                     <input type={"search"} placeholder={"Enter user name"}></input>
                     <label htmlFor="searchBtn" className={styles.labelBtnSr}>
                         <img src={searchIcon} alt={'serach'} className={styles.btnSrIcon}></img>
                     </label>
                     <button id={"searchBtn"} className={styles.btnSr}></button>
-                </div>
+                </div> */}
                 
             </div>
 
@@ -31,12 +32,10 @@ export default function Friends(props) {
                                 <img src={user.photos.small || defAva} alt={user.id} className={styles.friendPhoto}></img>
                             </NavLink>
                             <div className={styles.friendDescr}>
-                                <div className={styles.userName}>{user.name}</div>
-                                <div>
-                                    <span>New Message   </span>
-                                    <span>Unfollow</span>
-                                </div>
-
+                                <NavLink to={'/profile/' + user.id} className={styles.userName}>
+                                    <div className={styles.userNameContainer}>{user.name}</div>
+                                </NavLink>
+                                <div className={styles.userStatus}>{user.status || 'No status'}</div>
                             </div>
 
                         </div>

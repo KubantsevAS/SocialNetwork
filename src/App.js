@@ -14,10 +14,8 @@ import { withRouter } from './components/Profile/ProfileContainer'
 import Preloader from './components/Common/Preloader/Preloader';
 
 import './App.css';
-import Navbar from './components/Navbar/Navbar';
-import News from './components/News/News';
-import Music from './components/Music/Music';
-import Settings from './components/Settings/Settings';
+import Navbar, { MenuLinks, navbarLink } from './components/Navbar/Navbar';
+import About from './components/About/About';
 import { Suspense } from 'react';
 
 //import FriendsContainer from './components/Friends/FriendsContainer';
@@ -45,6 +43,9 @@ class App extends React.Component {
       <div className="app-wrapper">
         {/* <HeaderContainer /> */}
         <Navbar />
+        <div className={'mobileAdj'}>
+          <MenuLinks navbarLink={navbarLink}/>
+        </div>
 
         <div className='app-wrapper-content'>
           <Suspense fallback={<div>Loading...</div>}>
@@ -54,10 +55,8 @@ class App extends React.Component {
 
               <Route path='/profile/:userId' element={<ProfileContainer/>} />
 
-              <Route path='/news' element={<News />} />
-              <Route path='/music' element={<Music />} />
-              <Route path='/settings' element={<Settings />} />
-
+              <Route path='/about' element={<About />} />
+              
               <Route path='/users' element={<UsersContainer/>} />
 
               <Route path='/login' element={<Login />} />

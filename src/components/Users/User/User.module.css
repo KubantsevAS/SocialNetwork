@@ -53,3 +53,22 @@
     box-shadow: 0 0 7px black;
 }
 
+@media (max-width: 700px) {
+
+    .userName {
+        font-size: 20px;
+    }
+
+    .userStatus {
+        font-size: 20px;
+    }
+
+    .userCard span {
+        margin-right: 5px;
+    }
+
+    .userCard {
+        margin: 5px;
+    }
+}
+

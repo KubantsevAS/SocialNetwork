@@ -11,3 +11,10 @@
     font-size: 40px;
     font-weight: 900;
 }
+
+
+@media (max-width: 700px) {
+    .loginForm {
+        width: 300px;
+    }
+}

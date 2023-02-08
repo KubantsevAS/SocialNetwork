@@ -24,6 +24,10 @@
     background-color: #f2f2f2;
 }
 
+.mobileAdj{
+    display: none;
+}
+
 @media (max-width: 1220px) {
     .app-wrapper {
         grid-template-columns: 2fr 7fr;
@@ -42,5 +46,20 @@
     }
     .app-wrapper-content {
         padding: 10px;
+    }
+    .mobileAdj {
+        display: block;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+}
+
+@media (max-width: 350px) {
+    .app-wrapper {
+        width: fit-content;
+    }
+    .app-wrapper-content {
+        overflow: hidden;
     }
 }

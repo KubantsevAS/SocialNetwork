@@ -3,7 +3,6 @@
     flex-direction: row;
     margin: 10px 0 40px;
     text-align: center;
-    
     justify-content: center;
 }
 
@@ -68,5 +67,29 @@
 @media (max-width: 1200px) {
     .pageItem {
         padding: 5px 1px;
+    }
+}
+
+@media (max-width: 700px) {
+    .pages {
+        flex-wrap: wrap;
+    }
+    .pageItem {
+        margin: 10px 5px;
+    }
+    .selectedPage {
+        margin: 10px 7px;
+        padding: 5px;
+    }
+}
+
+@media (max-width: 700px) { 
+
+    .pageItem {
+        margin: 10px 3px;
+    }
+
+    .selectedPage { 
+        margin: 10px 3px;
     }
 }
