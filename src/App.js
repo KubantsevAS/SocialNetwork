@@ -63,6 +63,7 @@ class App extends React.Component {
 
               <Route path='/friends' element={<FriendsContainer />} />
 
+              <Route path='*' element={<div>404 Page not found</div>}/>
 
             </Routes>
           </Suspense>

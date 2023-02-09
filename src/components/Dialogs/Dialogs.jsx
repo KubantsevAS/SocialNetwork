@@ -6,23 +6,27 @@ import PrintMessage from './PrintMessage/PrintMessage';
 const Dialogs = (props) => {
 
     return (
-        <div className={classes.dialogPage}>
-            <div className={classes.dialogItems}>
+        <>
+            <h1>This section is under develompent and does not work yet</h1>
+            <div className={classes.dialogPage}>
 
-                {props.dialogsElements}
-                
-            </div>
-            <div className={classes.rightPanel}>
-                
-                <div className={classes.messagesPanel}>
-                    {props.messagesElements}
+                <div className={classes.dialogItems}>
+
+                    {props.dialogsElements}
+
                 </div>
+                <div className={classes.rightPanel}>
 
-                <PrintMessage addMessage={props.addMessage} />
-                
-                
+                    <div className={classes.messagesPanel}>
+                        {props.messagesElements}
+                    </div>
+
+                    <PrintMessage addMessage={props.addMessage} />
+
+
+                </div>
             </div>
-        </div>
+        </>
     );
 }
 

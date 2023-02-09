@@ -1,14 +1,14 @@
 import React, {useState} from 'react';
 import { Form, Field } from 'react-final-form';
 import { TextArea } from '../../../Common/FormControls/FormsControls';
-import { requiredField, maxLengthCreator, composeValidators } from './../../../../utilities/validators/validators'
+import { maxLengthCreator, composeValidators, requiredField } from './../../../../utilities/validators/validators'
 import styles from './NewPostForm.module.css'
 
 
 const NewPostForm = (props) => {
 
     let addNewPost = (values) => {
-        props.addNewPost(values.postField)
+        props.addNewPost(values.postField)           
     }
 
     return (
@@ -25,7 +25,7 @@ const NewPostForm = (props) => {
                     >
                         {({ input, meta }) => (
                             <div className={styles.textareaContainer}>
-                                <TextArea {...input} meta={meta} type="text" placeholder={"Post text"} 
+                                <TextArea {...input} meta={meta} type="text" placeholder={"Enter something to share your post..."} 
                                     styles={styles.textarea}
                                     errorStyle={styles.textareaError}
                                 />
@@ -39,7 +39,10 @@ const NewPostForm = (props) => {
                         <button 
                             type={"submit"} 
                             disabled={submitting} 
-                            onClick={() => setTimeout(form.reset, 100)}
+                            onClick={() => {
+                                if (values.postField){
+                                setTimeout(form.restart, 100)}
+                            }}
                             id='newPostBtn'
                             className={styles.postBtn}
                         >
