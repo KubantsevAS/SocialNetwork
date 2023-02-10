@@ -104,8 +104,11 @@ export const saveProfile = (profile) => async (dispatch, getState) => {
 }
 
 export const getUserInfo = (userId) => async (dispatch) => {
+    try {
     let response = await usersAPI.getProfile(userId);
     dispatch(setUserProfile(response.data));
+    } catch (error){    
+    }
 }
 
 

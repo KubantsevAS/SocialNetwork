@@ -10,5 +10,5 @@ const About = () => {
 
 
 export default compose(
-    withAuthRedirect
+    //withAuthRedirect
     )(About);

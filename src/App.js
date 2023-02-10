@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { Navigate, Route, Routes } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { compose } from 'redux';
 import { Provider } from 'react-redux';
@@ -28,9 +28,19 @@ const FriendsContainer = React.lazy(() => import('./components/Friends/FriendsCo
 
 class App extends React.Component {
 
+  // catchAllUnhandledErrors = (promiseRejectionEvent) => {
+  //   alert("Some error occured");
+  //   console.log(promiseRejectionEvent);
+  // }
+
   componentDidMount() {
     this.props.initializeApp();
+    //window.addEventListener('unhandledrejection', this.catchAllUnhandledErrors)
   }
+
+  // componentWillUnmount() {
+  //   window.removeEventListener('unhandledrejection', this.catchAllUnhandledErrors)
+  // }
 
   render() {
 
@@ -51,19 +61,21 @@ class App extends React.Component {
           <Suspense fallback={<div>Loading...</div>}>
             <Routes>
 
-              <Route path='/dialogs' element={<DialogsContainer />} />
+              <Route path='/' element={<Navigate to='/about'/>}/>
 
               <Route path='/profile/:userId' element={<ProfileContainer/>} />
 
-              <Route path='/about' element={<About />} />
-              
+              <Route path='/dialogs' element={<DialogsContainer />} />
+
               <Route path='/users' element={<UsersContainer/>} />
 
               <Route path='/login' element={<Login />} />
 
               <Route path='/friends' element={<FriendsContainer />} />
 
-              <Route path='*' element={<div>404 Page not found</div>}/>
+              <Route path='/about' element={<About />} />
+
+              <Route path='*' element={<h1>404 Page not found</h1>}/>
 
             </Routes>
           </Suspense>
