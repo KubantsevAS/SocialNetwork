@@ -27,7 +27,7 @@ export default function Friends(props) {
             <div className={styles.friendsItemsInner}>
                 {props.users.map(user => {
                     return (
-                        <div className={styles.friendItem}>
+                        <div className={styles.friendItem} key={user.id}>
                             <NavLink to={'/profile/' + user.id}>
                                 <img src={user.photos.small || defAva} alt={user.id} className={styles.friendPhoto}></img>
                             </NavLink>

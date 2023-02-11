@@ -50,7 +50,7 @@ export default function ProfileData(props) {
                                         return false
                                     }
                                     return (
-                                        <a href={props.profile.contacts[key]} target='_blank' rel='noreferrer'>
+                                        <a href={props.profile.contacts[key]} target='_blank' rel='noreferrer' key={key}>
                                             <img src={iconArr[index]} alt={props.profile.contacts[key]} className={styles.contactIcon}></img>
                                         </a>
                                         

@@ -9,11 +9,11 @@ class LogoutTab extends React.Component {
         return (
             <div>
                 { this.props.isAuth && 
-                    <div className={styles.logoutTab}>
+                    <label htmlFor='btn' className={styles.logoutTab}>
                         <img alt={'icon'} src={logoutImg} className={styles.lgImg}></img>
-                        <label htmlFor='btn' className={styles.text}>Log out</label>
+                        <div className={styles.text}>Log out</div>
                         <button id='btn' onClick={this.props.logout} className={styles.btn}></button>
-                    </div>
+                    </label>
                 }
             </div>
         );
