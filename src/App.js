@@ -1,10 +1,9 @@
 import React from 'react';
-import { Navigate, Route, Routes } from 'react-router-dom';
+import { HashRouter, Navigate, Route, Routes } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { compose } from 'redux';
 import { Provider } from 'react-redux';
 import store from './redux/reduxStore';
-import { BrowserRouter} from 'react-router-dom';
 import Login from './components/Login/Login';
 import { initializeApp } from './redux/appReducer';
 import Preloader from './components/Common/Preloader/Preloader';
@@ -79,13 +78,13 @@ let AppContainer = compose(
 
 let MainApp = () => {
   return (
-    <BrowserRouter
-      basename={process.env.PUBLIC_URL}  //ENVIROMENT FOR GITHUBPAGES
+    <HashRouter
+      //basename={process.env.PUBLIC_URL}  //ENVIROMENT FOR GITHUBPAGES
     >
       <Provider store={store}>
         <AppContainer />
       </Provider>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 
