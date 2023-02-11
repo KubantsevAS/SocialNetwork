@@ -1,0 +1,60 @@
+.aboutTab {
+    font-size: 20px;
+}
+
+.aboutTitle {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.loginInfo {
+    width: 90%;
+    margin: 20px auto;
+    border-bottom: 1px solid gray;
+}
+
+.listItem {
+    display: flex;
+}
+.listItem span {
+    width: 120px;
+}
+
+.mainInfo {
+    width: 80%;
+    margin: 30px auto;
+    text-align: justify;
+}
+
+.mainInfoItem {
+    margin-top: 20px;
+    position: relative;
+    border-bottom: 1px solid #cccccc;
+}
+
+.mainInfoItem a {
+    text-decoration: none;
+    margin: 15px;
+}
+
+.link {
+    font-size: 20px;
+    font-weight: 200;
+    letter-spacing: 1.5px;
+    width: 60px;
+    height: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 0;
+    background-color: #cccccc;
+    box-shadow: 0 2px 3px #555555
+}
+
+.link:hover {
+    background-color:#fff;
+}
+
+.link:active {
+    background-color: #999999;
+    transform: translateY(2px);
+}

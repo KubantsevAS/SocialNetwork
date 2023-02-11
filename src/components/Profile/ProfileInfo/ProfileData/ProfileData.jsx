@@ -1,5 +1,4 @@
 import React from 'react';
-import { Contact } from '../ProfileInfo';
 import styles from './ProfileData.module.css'
 import facebookIcon from './../../../../redux/images/icons/contacts/facebook.png'
 import websiteIcon from './../../../../redux/images/icons/contacts/website.png'
@@ -51,9 +50,8 @@ export default function ProfileData(props) {
                                         return false
                                     }
                                     return (
-                                        <a href={props.profile.contacts[key]} target='_blank'>
+                                        <a href={props.profile.contacts[key]} target='_blank' rel='noreferrer'>
                                             <img src={iconArr[index]} alt={props.profile.contacts[key]} className={styles.contactIcon}></img>
-                                            {/* <Contact contactTitle={key} contactValue={props.profile.contacts[key]} /> */}
                                         </a>
                                         
                                     )

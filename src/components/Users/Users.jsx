@@ -20,6 +20,7 @@ const Users = ({ currentPage, onPageChanged, totalUsersCount, pageSize, ...props
                 followingInProgress={props.followingInProgress}
                 follow={props.follow}
                 unfollow={props.unfollow}
+                isAuth={props.isAuth}
             />
         </div>
     )

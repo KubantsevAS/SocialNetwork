@@ -2,7 +2,7 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import styles from './Friends.module.css'
 import defAva from './../../redux/images/avatars/AvaDefault.png'
-import searchIcon from './../../redux/images/icons/search.png'
+//import searchIcon from './../../redux/images/icons/search.png'
 
 export default function Friends(props) {
 

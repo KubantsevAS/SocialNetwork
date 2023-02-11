@@ -32,7 +32,7 @@ const LoginForm = (props) => {
                             name: "login",
                             type: "text",
                             placeholder: "Email",
-                            validators: composeValidators(requiredField, maxLengthCreator(22)),
+                            validators: composeValidators(requiredField),
                             icon: emailIcon,
                         })
                         }
@@ -51,13 +51,13 @@ const LoginForm = (props) => {
                     </div>
                     <div>
 
-                        {props.captchaUrl && <img src={props.captchaUrl} className={styles.captchaPic}/>}
+                        {props.captchaUrl && <img src={props.captchaUrl} className={styles.captchaPic} alt='captcha'/>}
                         {props.captchaUrl &&
                             createInput({
                                 name: "captcha",
                                 type: "text",
                                 placeholder: "Enter captcha",
-                                validators: composeValidators(requiredField, maxLengthCreator(22)),
+                                validators: composeValidators(requiredField, maxLengthCreator(10)),
                                 icon: captchaIcon
                             })
 

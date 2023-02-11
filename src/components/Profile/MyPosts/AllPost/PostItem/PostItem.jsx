@@ -20,7 +20,7 @@ const PostItem = (props) => {
     return (
         <div className={classes.PostItem}>
             <div className={classes.postUpperPart}>
-                <img src={ava || defAva} className={classes.postAvatar}></img>
+                <img src={ava || defAva} className={classes.postAvatar} alt='user'></img>
 
                 <div className={classes.postInner}>
                     <div className={classes.PostOwner}>{name}</div>

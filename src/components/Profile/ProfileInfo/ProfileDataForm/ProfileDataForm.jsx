@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Form, Field } from 'react-final-form'
-import { composeValidators, maxLengthCreator, requiredField } from '../../../../utilities/validators/validators'
+import { composeValidators, requiredField } from '../../../../utilities/validators/validators'
 import { Input, TextArea } from '../../../Common/FormControls/FormsControls'
 import { Contact } from '../ProfileInfo'
 import { FORM_ERROR } from 'final-form';

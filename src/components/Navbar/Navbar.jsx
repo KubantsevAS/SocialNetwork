@@ -43,7 +43,7 @@ export const MenuLinks = ({navbarLink}) => {
 export const navbarLink = (adress, linkName, pic) => {
     return (
         <NavLink to={adress} className={navData => navData.isActive ? classes.active : classes.item}>
-            <div className={classes.itemGlob}><img src={pic} className={classes.imgIcon}></img>{linkName}</div>
+            <div className={classes.itemGlob}><img src={pic} className={classes.imgIcon} alt='navIcon'></img>{linkName}</div>
         </NavLink>
     )
 }

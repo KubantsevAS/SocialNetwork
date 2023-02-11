@@ -9,9 +9,9 @@ const SET_FORMDATA_ERROR = 'SET_FORMDATA_ERROR';
 
 let initialState = {
     postsData: [
-        { id: 1, message: 'Hi, how are you?', number: 20 },
-        { id: 2, message: "It's my first post", number: 15 },
-        { id: 3, message: "Let's go!", number: 32 },
+        { id: 1, message: "It's a hard code on a hard drive!", number: 20 },
+        { id: 2, message: "My first post", number: 15 },
+        { id: 3, message: "Let's celebrate and create some app", number: 32 },
     ],
     profile: null,
     status: "",

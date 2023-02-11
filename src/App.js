@@ -4,43 +4,25 @@ import { connect } from 'react-redux';
 import { compose } from 'redux';
 import { Provider } from 'react-redux';
 import store from './redux/reduxStore';
-import { BrowserRouter, HashRouter } from 'react-router-dom';
-
-import UsersContainer from './components/Users/UsersContainer';
-import HeaderContainer from './components/Header/HeaderContainer';
+import { BrowserRouter} from 'react-router-dom';
 import Login from './components/Login/Login';
 import { initializeApp } from './redux/appReducer';
-import { withRouter } from './components/Profile/ProfileContainer'
 import Preloader from './components/Common/Preloader/Preloader';
-
 import './App.css';
 import Navbar, { MenuLinks, navbarLink } from './components/Navbar/Navbar';
 import About from './components/About/About';
 import { Suspense } from 'react';
 
-//import FriendsContainer from './components/Friends/FriendsContainer';
-//import DialogsContainer from './components/Dialogs/DialogsContainer';
-//import ProfileContainer from './components/Profile/ProfileContainer';
 const DialogsContainer = React.lazy(() => import('./components/Dialogs/DialogsContainer'));
 const ProfileContainer = React.lazy(() => import('./components/Profile/ProfileContainer'));
 const FriendsContainer = React.lazy(() => import('./components/Friends/FriendsContainer'));
-
+const UsersContainer = React.lazy(() => import('./components//Users/UsersContainer'));
 
 class App extends React.Component {
 
-  // catchAllUnhandledErrors = (promiseRejectionEvent) => {
-  //   alert("Some error occured");
-  //   console.log(promiseRejectionEvent);
-  // }
-
   componentDidMount() {
     this.props.initializeApp();
-    //window.addEventListener('unhandledrejection', this.catchAllUnhandledErrors)
   }
-
-  // componentWillUnmount() {
-  //   window.removeEventListener('unhandledrejection', this.catchAllUnhandledErrors)
-  // }
 
   render() {
 
@@ -58,7 +40,7 @@ class App extends React.Component {
         </div>
 
         <div className='app-wrapper-content'>
-          <Suspense fallback={<div>Loading...</div>}>
+          <Suspense fallback={<h1>Loading...</h1>}>
             <Routes>
 
               <Route path='/' element={<Navigate to='/about'/>}/>
@@ -97,13 +79,13 @@ let AppContainer = compose(
 
 let MainApp = () => {
   return (
-    <HashRouter
+    <BrowserRouter
       //basename={process.env.PUBLIC_URL}  //ENVIROMENT FOR GITHUBPAGES
     >
       <Provider store={store}>
         <AppContainer />
       </Provider>
-    </HashRouter>
+    </BrowserRouter>
   )
 }
 

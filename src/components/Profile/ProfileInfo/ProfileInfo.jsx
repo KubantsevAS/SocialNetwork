@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import Preloader from '../../Common/Preloader/Preloader';
 import { Navigate } from 'react-router-dom'
 import classes from './ProfileInfo.module.css'

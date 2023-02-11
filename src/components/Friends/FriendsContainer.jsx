@@ -4,7 +4,6 @@ import { compose } from 'redux';
 import { requestFriends } from '../../redux/friendsReducer';
 import withAuthRedirect from '../../hoc/withAuthRedirect';
 import Friends from './Friends';
-import Preloader from '../Common/Preloader/Preloader';
 
 class FriendsContainer extends Component {
     
@@ -18,10 +17,7 @@ class FriendsContainer extends Component {
     
     render() {
         return (
-            <>
-                {/* {!this.props.isFetching ? <Preloader /> : null} */}
                 <Friends {...this.props}/>
-            </>   
         );
     }
 }
