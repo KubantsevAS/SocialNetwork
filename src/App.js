@@ -80,7 +80,7 @@ let AppContainer = compose(
 let MainApp = () => {
   return (
     <BrowserRouter
-      //basename={process.env.PUBLIC_URL}  //ENVIROMENT FOR GITHUBPAGES
+      basename={process.env.PUBLIC_URL}  //ENVIROMENT FOR GITHUBPAGES
     >
       <Provider store={store}>
         <AppContainer />
