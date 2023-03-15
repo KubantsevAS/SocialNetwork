@@ -14,7 +14,7 @@ After five failed login attempts, you will see a captcha that needs to be solved
 - On the 'Friends' tab, you see a list of users you are followed to. You can go to each user's page by clicking on their name or photo.
 - On the 'All users' tab, you can see all the Network users. You can go to each user's page and also click the button to follow or unfollow user.
 
-## Used tech stack:
+## **Used tech stack**
 - React v18
 - React-router-dom
 - Redux
