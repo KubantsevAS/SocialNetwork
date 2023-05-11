@@ -5,7 +5,7 @@ import { compose } from 'redux';
 import { Provider } from 'react-redux';
 import store from './redux/reduxStore';
 import Login from './components/Login/Login';
-import { initializeApp } from './redux/appReducer';
+import { initializeApp } from './redux/appReducer.ts';
 import Preloader from './components/Common/Preloader/Preloader';
 import './App.css';
 import Navbar, { MenuLinks, navbarLink } from './components/Navbar/Navbar';
@@ -15,6 +15,7 @@ import { Suspense } from 'react';
 const DialogsContainer = React.lazy(
   () => import('./components/Dialogs/DialogsContainer')
 );
+
 const ProfileContainer = React.lazy(
   () => import('./components/Profile/ProfileContainer')
 );
@@ -80,9 +81,7 @@ const AppContainer = compose(
 
 const MainApp = () => {
   return (
-    <HashRouter
-    // basename={process.env.PUBLIC_URL}  //ENVIROMENT FOR GITHUBPAGES
-    >
+    <HashRouter>
       <Provider store={store}>
         <AppContainer />
       </Provider>

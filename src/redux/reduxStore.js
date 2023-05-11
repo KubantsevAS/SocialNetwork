@@ -8,9 +8,9 @@ import profileReducer from './profileReducer.js';
 import dialogsReducer from './dialogsReducer.js';
 import friendsReducer from './friendsReducer.js';
 import usersReducer from './usersReducer.js';
-import authReducer from './authReducer.js';
+import authReducer from './authReducer.ts';
 import thunkMiddleware from 'redux-thunk';
-import appReducer from './appReducer.js';
+import appReducer from './appReducer.ts';
 
 const reducers = combineReducers({
   profilePage: profileReducer, // profileReducer : profileReducer,

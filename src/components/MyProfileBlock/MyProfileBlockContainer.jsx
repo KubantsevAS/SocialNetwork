@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import MyProfileBlock from './MyProfileBlock';
-import { getUserPhoto } from '../../redux/authReducer';
+import { getUserPhoto } from '../../redux/authReducer.ts';
 
 class MyProfileBlockContainer extends React.Component {
   componentDidMount() {

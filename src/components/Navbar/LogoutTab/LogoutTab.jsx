@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { logout } from './../../../redux/authReducer';
+import { logout } from '../../../redux/authReducer.ts';
 import styles from './LogoutTab.module.css';
 import logoutImg from '../../../redux/images/icons/logout.png';
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import LoginFrom from './LoginForm/LoginForm';
-import { login } from '../../redux/authReducer';
+import { login } from '../../redux/authReducer.ts';
 import { Navigate } from 'react-router-dom';
 import styles from './Login.module.css';
 

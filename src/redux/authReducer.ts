@@ -1,4 +1,4 @@
-import { usersAPI, authAPI, securityAPI } from './../api/api';
+import { usersAPI, authAPI, securityAPI } from '../api/api';
 
 const SET_USER_DATA = 'auth/SET_USER_DATA';
 const SET_ERROR = 'auth/SET_ERROR';
@@ -11,7 +11,7 @@ const initialState = {
   login: null,
   isAuth: false,
   errorMessage: false,
-  captchaUrl: null, // if null, then captcha is not required
+  captchaUrl: null,
   userPhoto: null,
 };
 
