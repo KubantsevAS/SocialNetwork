@@ -1,19 +1,18 @@
 .dialogPage {
-    display: grid;
-    grid-template-columns: 2fr 5fr;
-    color: white
+  display: grid;
+  grid-template-columns: 2fr 5fr;
+  color: white;
 }
 
 .dialogItems {
-    padding: 10px;
-    display: block;
+  padding: 10px;
+  display: block;
 }
 
 .rightPanel {
-    border-left: 4px solid black;
+  border-left: 4px solid black;
 }
 
 .messagesPanel {
-    width: 100%
+  width: 100%;
 }
-

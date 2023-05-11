@@ -1,15 +1,15 @@
 .my__posts {
-    margin: 0;
-    font-size: 20px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  margin: 0;
+  font-size: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .myPostsTitle {
-    margin: 30px;
-    font-weight: 900;
-    font-size: 35px;
-    align-self: baseline;
+  margin: 30px;
+  font-weight: 900;
+  font-size: 35px;
+  align-self: baseline;
 }

@@ -1,80 +1,80 @@
 .loginPhoto {
-    width: 70%;
-    height: 70%;
-    position: absolute;
-    right: 20%;
-    top: 18%;
-    border-top-left-radius: 50%;
-    border-bottom-left-radius: 50%;
+  width: 70%;
+  height: 70%;
+  position: absolute;
+  right: 20%;
+  top: 18%;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
 }
 
 .userPhoto {
-    width: 100%;
-    height: auto;
-    border-radius: 50%;
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
 }
 
 .photoField {
-    width: 120px;
-    height: 120px;
-    margin: 0 auto;
-    border-radius: 50%;
-    position: relative;
-    background-color: #444444;
-    margin-bottom: 20px;
-    border: 1px solid #40C057;
-    transition: background-color linear 0.2s;
-    transition: box-shadow linear 0.2s;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto;
+  border-radius: 50%;
+  position: relative;
+  background-color: #444444;
+  margin-bottom: 20px;
+  border: 1px solid #40c057;
+  transition: background-color linear 0.2s;
+  transition: box-shadow linear 0.2s;
 }
 
 .photoField:hover {
-    background-color: #555555;
-    box-shadow: 0 0 10px black;
+  background-color: #555555;
+  box-shadow: 0 0 10px black;
 }
 .photoField:active {
-    background-color: #666666;
-    box-shadow: 0 0 10px black;
+  background-color: #666666;
+  box-shadow: 0 0 10px black;
 }
 
-.myLinkCommon{
-    text-decoration: none;
-    color: white;
+.myLinkCommon {
+  text-decoration: none;
+  color: white;
 }
 
-.myInfo{
-    width: 100%;
-    background-image: url("../../redux/images/backgrounds/mountains.jpg");
-    background-size: cover;
-    background-position: center;
-    height: 250px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.myInfo {
+  width: 100%;
+  background-image: url('../../redux/images/backgrounds/mountains.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.loginTextInner{
-    padding: 0 30px;
-    border-radius: 15px;
-    position: relative;
-    transition: background-color linear 0.2s;
+.loginTextInner {
+  padding: 0 30px;
+  border-radius: 15px;
+  position: relative;
+  transition: background-color linear 0.2s;
 }
 
-.loginTextInner:hover{
-    background-color: rgb(333, 333, 333, 0.3)
+.loginTextInner:hover {
+  background-color: rgb(333, 333, 333, 0.3);
 }
-.loginTextInner:active{
-    background-color: rgb(333, 333, 333, 0.5)
+.loginTextInner:active {
+  background-color: rgb(333, 333, 333, 0.5);
 }
 
 @media (max-width: 700px) {
-    .photoField {
-        width: 60px;
-        height: 60px;
-        margin-bottom: 5px;
-    }
-    .myInfo{
-        height: 100px;
-        position: sticky;
-        bottom: 0;
-    }
+  .photoField {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 5px;
+  }
+  .myInfo {
+    height: 100px;
+    position: sticky;
+    bottom: 0;
+  }
 }

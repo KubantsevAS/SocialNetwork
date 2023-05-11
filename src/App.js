@@ -12,80 +12,82 @@ import Navbar, { MenuLinks, navbarLink } from './components/Navbar/Navbar';
 import About from './components/About/About';
 import { Suspense } from 'react';
 
-const DialogsContainer = React.lazy(() => import('./components/Dialogs/DialogsContainer'));
-const ProfileContainer = React.lazy(() => import('./components/Profile/ProfileContainer'));
-const FriendsContainer = React.lazy(() => import('./components/Friends/FriendsContainer'));
-const UsersContainer = React.lazy(() => import('./components//Users/UsersContainer'));
+const DialogsContainer = React.lazy(
+  () => import('./components/Dialogs/DialogsContainer')
+);
+const ProfileContainer = React.lazy(
+  () => import('./components/Profile/ProfileContainer')
+);
+const FriendsContainer = React.lazy(
+  () => import('./components/Friends/FriendsContainer')
+);
+const UsersContainer = React.lazy(
+  () => import('./components//Users/UsersContainer')
+);
 
 class App extends React.Component {
-
   componentDidMount() {
     this.props.initializeApp();
   }
 
   render() {
-
     if (!this.props.initialized) {
-      return (<Preloader />)
+      return <Preloader />;
     }
 
     return (
-
       <div className="app-wrapper">
         {/* <HeaderContainer /> */}
         <Navbar />
         <div className={'mobileAdj'}>
-          <MenuLinks navbarLink={navbarLink}/>
+          <MenuLinks navbarLink={navbarLink} />
         </div>
 
-        <div className='app-wrapper-content'>
+        <div className="app-wrapper-content">
           <Suspense fallback={<h1>Loading...</h1>}>
             <Routes>
+              <Route path="/" element={<Navigate to="/about" />} />
 
-              <Route path='/' element={<Navigate to='/about'/>}/>
+              <Route path="/profile/:userId" element={<ProfileContainer />} />
 
-              <Route path='/profile/:userId' element={<ProfileContainer/>} />
+              <Route path="/dialogs" element={<DialogsContainer />} />
 
-              <Route path='/dialogs' element={<DialogsContainer />} />
+              <Route path="/users" element={<UsersContainer />} />
 
-              <Route path='/users' element={<UsersContainer/>} />
+              <Route path="/login" element={<Login />} />
 
-              <Route path='/login' element={<Login />} />
+              <Route path="/friends" element={<FriendsContainer />} />
 
-              <Route path='/friends' element={<FriendsContainer />} />
+              <Route path="/about" element={<About />} />
 
-              <Route path='/about' element={<About />} />
-
-              <Route path='*' element={<h1>404 Page not found</h1>}/>
-
+              <Route path="*" element={<h1>404 Page not found</h1>} />
             </Routes>
           </Suspense>
         </div>
-
       </div>
-
-    )
+    );
   }
 }
 
 const mapStatetoProps = (state) => ({
-  initialized: state.app.initialized
-})
+  initialized: state.app.initialized,
+});
 
-let AppContainer = compose(
-  //withRouter,
-  connect(mapStatetoProps, { initializeApp }))(App);
+const AppContainer = compose(
+  // withRouter,
+  connect(mapStatetoProps, { initializeApp })
+)(App);
 
-let MainApp = () => {
+const MainApp = () => {
   return (
     <HashRouter
-      //basename={process.env.PUBLIC_URL}  //ENVIROMENT FOR GITHUBPAGES
+    // basename={process.env.PUBLIC_URL}  //ENVIROMENT FOR GITHUBPAGES
     >
       <Provider store={store}>
         <AppContainer />
       </Provider>
     </HashRouter>
-  )
-}
+  );
+};
 
 export default MainApp;

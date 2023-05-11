@@ -1,13 +1,11 @@
-import {addPost} from '../../../redux/profileReducer'
+import { addPost } from '../../../redux/profileReducer';
 import MyPosts from './MyPosts';
-import {connect} from 'react-redux'
-
+import { connect } from 'react-redux';
 
 const mapStateToProps = (state) => {
-    return {
-        profilePage : state.profilePage
-    }
-}
+  return {
+    profilePage: state.profilePage,
+  };
+};
 
-export default connect (mapStateToProps, {addPost}) (MyPosts);
-
+export default connect(mapStateToProps, { addPost })(MyPosts);

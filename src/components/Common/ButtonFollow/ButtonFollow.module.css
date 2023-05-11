@@ -1,38 +1,38 @@
 .btn button {
-    font-family: 'Source Sans Pro', sans-serif;
-    color: #111111;
-    margin-top: 5px;
-    font-size: 17px;
-    width: 100px;
-    height: 30px;
-    border-radius: 10px;
-    cursor: pointer;
-    border: 0;
-    box-shadow: 0 2px 3px #555555
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #111111;
+  margin-top: 5px;
+  font-size: 17px;
+  width: 100px;
+  height: 30px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 0;
+  box-shadow: 0 2px 3px #555555;
 }
 
 .btn__blue {
-    background-color: #bbbbbb;
+  background-color: #bbbbbb;
 }
 
 .btn__blue:hover {
-    background-color:#cccccc;
+  background-color: #cccccc;
 }
 
 .btn__blue:active {
-    background-color: #999999;
-    transform: translateY(2px);
+  background-color: #999999;
+  transform: translateY(2px);
 }
 
 .btn__red {
-    background-color:#65d279;
+  background-color: #65d279;
 }
 
 .btn__red:hover {
-    background-color:lightgreen;
+  background-color: lightgreen;
 }
 
 .btn__red:active {
-    background-color: #40C057;
-    transform: translateY(2px);
+  background-color: #40c057;
+  transform: translateY(2px);
 }

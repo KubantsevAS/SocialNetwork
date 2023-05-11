@@ -1,76 +1,76 @@
 .statusContainer {
-    font-size: 30px;
-    font-weight: 900;
-    margin: 10px 0;
-    padding: 13px;
-    border: 2px solid darkblue;
-    border-radius: 25px;
-    text-align: center;
-    position: relative;
+  font-size: 30px;
+  font-weight: 900;
+  margin: 10px 0;
+  padding: 13px;
+  border: 2px solid darkblue;
+  border-radius: 25px;
+  text-align: center;
+  position: relative;
 }
 
 .statusHeader {
-    position: absolute;
-    font-size: 20px;
-    font-weight: 400;
-    top: -15px;
-    left: 20%;
-    text-align: center;
-    background-color: #f2f2f2;
-    padding: 0 5px;
-    color: darkblue;
+  position: absolute;
+  font-size: 20px;
+  font-weight: 400;
+  top: -15px;
+  left: 20%;
+  text-align: center;
+  background-color: #f2f2f2;
+  padding: 0 5px;
+  color: darkblue;
 }
 .statusInner {
-    padding: 12px;
-    cursor: pointer;
-    border-radius: 15px;
-    overflow-wrap: break-word;
+  padding: 12px;
+  cursor: pointer;
+  border-radius: 15px;
+  overflow-wrap: break-word;
 }
 
 .statusInner:hover {
-    box-shadow: 0 0px 3px #555555
+  box-shadow: 0 0px 3px #555555;
 }
 
 .statusInput {
-    border-radius: 15px;
-    padding: 12px 0;
-    width: 100%;
-    font-size: 30px;
+  border-radius: 15px;
+  padding: 12px 0;
+  width: 100%;
+  font-size: 30px;
 }
 
 .statusEmpty {
-    color: gray;
-    font-size: 25px;
+  color: gray;
+  font-size: 25px;
 }
 
 [data-tooltip]::after {
-    content: attr(data-tooltip);
-    opacity: 0;
-    transition: 1s;
-    pointer-events: none;
-    position: absolute;
-    right: 0; 
-    bottom: 0;
-    font-size: 15px;
-    font-weight: 200;
-    padding: 5px;
-    background-color: #40C057;
-    border-radius: 10px;
-    box-shadow: 0 2px 3px #555555
+  content: attr(data-tooltip);
+  opacity: 0;
+  transition: 1s;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  font-size: 15px;
+  font-weight: 200;
+  padding: 5px;
+  background-color: #40c057;
+  border-radius: 10px;
+  box-shadow: 0 2px 3px #555555;
 }
 
 [data-tooltip]:hover::after {
-    opacity: 1;
-    bottom: -1em;
-    right: -1em;
+  opacity: 1;
+  bottom: -1em;
+  right: -1em;
 }
 
 @media (max-width: 500px) {
-    .statusInner {
-        max-width: 200px;
-        padding:  5px;
-    }
-    .statusContainer {
-        padding: 5px;
-    }
+  .statusInner {
+    max-width: 200px;
+    padding: 5px;
+  }
+  .statusContainer {
+    padding: 5px;
+  }
 }

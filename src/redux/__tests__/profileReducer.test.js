@@ -1,52 +1,48 @@
-import profileReducer, { addPost, deletePost } from "../profileReducer";
+import profileReducer, { addPost, deletePost } from '../profileReducer';
 // in package.json was:   "test": "react-scripts test",
 // should be: "test": "jest"
 
 let state = {
-    postsData: [
-        { id: 1, message: 'Hi, how are you?', number: 20 },
-        { id: 2, message: "It's my first post", number: 15 },
-        { id: 3, message: "Let's go!", number: 32 },
-    ],
-    profile: null,
-    status: "",
-}
+  postsData: [
+    { id: 1, message: 'Hi, how are you?', number: 20 },
+    { id: 2, message: "It's my first post", number: 15 },
+    { id: 3, message: "Let's go!", number: 32 },
+  ],
+  profile: null,
+  status: '',
+};
 
-describe("profileReducer test", () => {
-    
-    test('posts number should be incremented', () => {
-        // TEST DATA
-        const action = addPost('newPost_eye');
-        //ACTION
-        const newState = profileReducer(state, action);
-        //EXPECTATION
-        expect(newState.postsData.length).toBe(4);
-    })
+describe('profileReducer test', () => {
+  test('posts number should be incremented', () => {
+    // TEST DATA
+    const action = addPost('newPost_eye');
+    //ACTION
+    const newState = profileReducer(state, action);
+    //EXPECTATION
+    expect(newState.postsData.length).toBe(4);
+  });
 
-    test('new post text test', () => {
+  test('new post text test', () => {
+    const action = addPost('newPost_eye');
 
-        const action = addPost('newPost_eye');
+    const newState = profileReducer(state, action);
 
-        const newState = profileReducer(state, action);
+    expect(newState.postsData[3].message).toBe('newPost_eye');
+  });
 
-        expect(newState.postsData[3].message).toBe("newPost_eye");
-    })
+  test('posts number after deleting post should be decremented', () => {
+    const action = deletePost(1);
 
-    test('posts number after deleting post should be decremented', () => {
+    const newState = profileReducer(state, action);
 
-        const action = deletePost(1);
+    expect(newState.postsData.length).toBe(2);
+  });
 
-        const newState = profileReducer(state, action);
+  test("posts number after deleting post shouldn't be decremented if id is incorecct", () => {
+    const action = deletePost(1000);
 
-        expect(newState.postsData.length).toBe(2);
-    })
+    const newState = profileReducer(state, action);
 
-    test("posts number after deleting post shouldn't be decremented if id is incorecct", () => {
-
-        const action = deletePost(1000);
-
-        const newState = profileReducer(state, action);
-
-        expect(newState.postsData.length).toBe(3);
-    })
-})
+    expect(newState.postsData.length).toBe(3);
+  });
+});

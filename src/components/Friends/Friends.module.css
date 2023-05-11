@@ -1,129 +1,127 @@
 .searchBlock {
-    width: fit-content;
-    margin: 5px auto 20px;
+  width: fit-content;
+  margin: 5px auto 20px;
 }
 
 .searchBlock input {
-    width: 100%;
-    height: 40px;
-    font-size: 20px;
-    padding-right: 10%;
+  width: 100%;
+  height: 40px;
+  font-size: 20px;
+  padding-right: 10%;
 }
 
 .labelBtnSr {
-    height: 40px;
-    background-color: #333333;
-    width: 10%;
-    position: absolute;
-    right: 0;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-bottom-right-radius: 3px;
-    border-top-right-radius: 3px;
-    transition: background-color linear 0.2s;
+  height: 40px;
+  background-color: #333333;
+  width: 10%;
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom-right-radius: 3px;
+  border-top-right-radius: 3px;
+  transition: background-color linear 0.2s;
 }
 
-
-.labelBtnSr:hover{
-    background-color: #555555;
+.labelBtnSr:hover {
+  background-color: #555555;
 }
-.labelBtnSr:active{
-    background-color: #666666;
+.labelBtnSr:active {
+  background-color: #666666;
 }
 
-.btnSrIcon{
-    width: 70%;
-    height: auto;
+.btnSrIcon {
+  width: 70%;
+  height: auto;
 }
 .btnSr {
-    display: none;
+  display: none;
 }
 
 .inputSearch {
-    display: flex;
-    position: relative;
+  display: flex;
+  position: relative;
 }
 
-
-.totalCount{
-    margin-top: 0px;
-    font-weight: 400;
+.totalCount {
+  margin-top: 0px;
+  font-weight: 400;
 }
 
 .friendsItemsInner {
-    display: block;
+  display: block;
 }
 
 .friendItem {
-    display: flex;
-    padding: 20px;
-    font-size: 25px;
+  display: flex;
+  padding: 20px;
+  font-size: 25px;
 }
 
 .friendPhoto {
-    border-radius: 50%;
-    margin-right: 15px;
-    width: 100px;
-    height: 100px;
-    background-color: #CCCCCC;
-    border: 1px solid #333333;
-    transition: background-color linear 0.2s;
-    transition: box-shadow linear 0.2s;
+  border-radius: 50%;
+  margin-right: 15px;
+  width: 100px;
+  height: 100px;
+  background-color: #cccccc;
+  border: 1px solid #333333;
+  transition: background-color linear 0.2s;
+  transition: box-shadow linear 0.2s;
 }
 
 .friendPhoto:hover {
-    background-color: #DDDDDD;
-    box-shadow: 0 0 7px black;
+  background-color: #dddddd;
+  box-shadow: 0 0 7px black;
 }
 .friendPhoto:active {
-    background-color: #AAAAAA;
-    box-shadow: 0 0 7px black;
+  background-color: #aaaaaa;
+  box-shadow: 0 0 7px black;
 }
 
 .friendDescr {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .userName {
-    font-weight: 900;
-    text-decoration: none;
-    color: #111;
+  font-weight: 900;
+  text-decoration: none;
+  color: #111;
 }
 
 .userStatus {
-    font-weight: 400;
-    padding: 5px 15px;
-    color: darkblue;
+  font-weight: 400;
+  padding: 5px 15px;
+  color: darkblue;
 }
 
 .userNameContainer {
-    width: fit-content;
-    padding: 5px 15px;
-    margin-bottom: 10px;
-    border-radius: 15px;
-    transition: background-color linear .2s;
+  width: fit-content;
+  padding: 5px 15px;
+  margin-bottom: 10px;
+  border-radius: 15px;
+  transition: background-color linear 0.2s;
 }
 .userNameContainer:hover {
-    background-color: rgb(200, 200, 200, 0.8);
+  background-color: rgb(200, 200, 200, 0.8);
 }
 .userNameContainer:active {
-    background-color: rgb(150, 150, 150, 0.8);
+  background-color: rgb(150, 150, 150, 0.8);
 }
 
 @media (max-width: 700px) {
-    .friendItem {
-        display: flex;
-        padding: 5px;
-        font-size: 20px;
-    }
-    .friendsPage {
-        overflow: hidden;
-    }
-    .friendPhoto {
-        margin-right: 5px;
-    }
+  .friendItem {
+    display: flex;
+    padding: 5px;
+    font-size: 20px;
+  }
+  .friendsPage {
+    overflow: hidden;
+  }
+  .friendPhoto {
+    margin-right: 5px;
+  }
 }

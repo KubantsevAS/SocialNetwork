@@ -1,66 +1,66 @@
 .inputFieldContainer {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .inputIcon {
-    margin-right: 20px;
-    height: 35px;
+  margin-right: 20px;
+  height: 35px;
 }
 .inputNew {
-    color: black;
-    background-color: #EEEEEE;
-    font-size: 20px;
-    padding: 15px;
-    box-sizing: border-box;
-    height: 40px;
-    width: 250px;
-    margin: 15px 0;
-    border: 0;
-    border-radius: 3px;
+  color: black;
+  background-color: #eeeeee;
+  font-size: 20px;
+  padding: 15px;
+  box-sizing: border-box;
+  height: 40px;
+  width: 250px;
+  margin: 15px 0;
+  border: 0;
+  border-radius: 3px;
 }
 
-.inputNew:focus{
-    outline: 2px solid #40c057;
-    box-shadow: 0 0 10px #40C057;
+.inputNew:focus {
+  outline: 2px solid #40c057;
+  box-shadow: 0 0 10px #40c057;
 }
 
-.inputNew:hover{
-    box-shadow: 0 0 10px #40C057;
+.inputNew:hover {
+  box-shadow: 0 0 10px #40c057;
 }
 
-.inputNewErr{   
-    outline: 2px solid red;
-    box-shadow: 0 0 10px red;
-    color: red;
+.inputNewErr {
+  outline: 2px solid red;
+  box-shadow: 0 0 10px red;
+  color: red;
 }
 
-.errorText{
-    font-weight: 900;
-    font-size: 16px;
-    color: red;
-    position: absolute;
-    top: 55px;
-    left: 50%;
+.errorText {
+  font-weight: 900;
+  font-size: 16px;
+  color: red;
+  position: absolute;
+  top: 55px;
+  left: 50%;
 }
 
-.oldErrorText{
-    display: block;
-    font-size: 20px;
+.oldErrorText {
+  display: block;
+  font-size: 20px;
 }
 
 .formControl.error textarea {
-    outline: 1px solid red;
-    box-shadow: 0 0 10px red;
+  outline: 1px solid red;
+  box-shadow: 0 0 10px red;
 }
 
 .formControl.error input {
-    outline: 1px solid red;
-    box-shadow: 0 0 10px red;
+  outline: 1px solid red;
+  box-shadow: 0 0 10px red;
 }
 
 .formControl.error span {
-    color: red;
+  color: red;
 }

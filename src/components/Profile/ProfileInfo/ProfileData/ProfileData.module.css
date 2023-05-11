@@ -1,54 +1,54 @@
 .mainInfo {
-    margin: 30px 0;
+  margin: 30px 0;
 }
 
 .mainInfo__item {
-    margin-top: 20px;
-    position: relative;
-    border-bottom: 1px solid #cccccc;
+  margin-top: 20px;
+  position: relative;
+  border-bottom: 1px solid #cccccc;
 }
 
 .mainInfo__item::before {
-    content: attr(subscribe);
-    position: absolute;
-    top: -20px;
-    left: 0;
-    font-size: 12px;
-    padding: 2px;
-    font-weight: 200;
-    color: grey;
+  content: attr(subscribe);
+  position: absolute;
+  top: -20px;
+  left: 0;
+  font-size: 12px;
+  padding: 2px;
+  font-weight: 200;
+  color: grey;
 }
 
-.contactsHeader{
-    font-size: 30px;
-    margin: 10px 0;
-    font-weight: 900;
+.contactsHeader {
+  font-size: 30px;
+  margin: 10px 0;
+  font-weight: 900;
 }
 
 .contactIcon {
-    height: 35px;
-    width: 35px;
-    margin: 5px;
-    padding: 5px;
-    border-radius: 10px;
-    transition: background-color linear .2s;
+  height: 35px;
+  width: 35px;
+  margin: 5px;
+  padding: 5px;
+  border-radius: 10px;
+  transition: background-color linear 0.2s;
 }
 
-.contactsContainer{
-    display: flex;
-    flex-wrap: wrap;
+.contactsContainer {
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.contactIcon:hover{
-    background-color: #bbb;
+.contactIcon:hover {
+  background-color: #bbb;
 }
 
-.contactIcon:active{
-    background-color: #888;
+.contactIcon:active {
+  background-color: #888;
 }
 
 .emptyContacts {
-    color: gray;
-    font-size: 25px;
-    font-weight: 900;
+  color: gray;
+  font-size: 25px;
+  font-weight: 900;
 }

@@ -1,53 +1,52 @@
 .printArea {
-    display: flex;
-    align-items: flex-end;
-    width: 100%;
-    
-    box-sizing: border-box;
-    background-color: white;
-    border-radius: 10px;
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+
+  box-sizing: border-box;
+  background-color: white;
+  border-radius: 10px;
 }
 .printAreaBorder {
-    width: 550px;
-    margin: 30px auto 0;
+  width: 550px;
+  margin: 30px auto 0;
 }
 
 .btn {
-    display: none;
+  display: none;
 }
 
 .postBtn {
-    margin-left: auto;
-    margin-right: 2px;
-    height: 40px;
-    width: 40px;
-    background-color: forestgreen;
-    border-radius: 50%;
-    cursor: pointer;
-    position: relative;
+  margin-left: auto;
+  margin-right: 2px;
+  height: 40px;
+  width: 40px;
+  background-color: forestgreen;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
 }
 
 .postBtn:hover {
-    background-color: greenyellow;
+  background-color: greenyellow;
 }
 
 .Arrow {
-    border-top: 3px solid black;
-    border-right: 3px solid black;
-    width: 15px;
-    height: 15px;
-    position: absolute;
-    top: 25%;
-    right: 35%;
-    transform: rotate(45deg);
-    cursor: pointer;
+  border-top: 3px solid black;
+  border-right: 3px solid black;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 25%;
+  right: 35%;
+  transform: rotate(45deg);
+  cursor: pointer;
 }
 
 .newMessage {
-    width: 90%;
-    height: 40px;
-    border: 0;
-    border-radius: 10px;
-    resize: none;
+  width: 90%;
+  height: 40px;
+  border: 0;
+  border-radius: 10px;
+  resize: none;
 }
-

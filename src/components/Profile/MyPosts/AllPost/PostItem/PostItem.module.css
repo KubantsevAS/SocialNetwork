@@ -1,85 +1,85 @@
 .Like {
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    width: 50px;
-    height: 25px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 5px;
-    background-color: #40C057;
-    font-weight: 400;
-    box-shadow: 0 1px 3px gray;
-    margin-left: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 50px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  background-color: #40c057;
+  font-weight: 400;
+  box-shadow: 0 1px 3px gray;
+  margin-left: 5px;
 }
 .Like:hover {
-    background-color: lightgreen;
+  background-color: lightgreen;
 }
 
 .Like:active {
-    transform: translateY(2px);
-    background-color: #2e9441;
+  transform: translateY(2px);
+  background-color: #2e9441;
 }
 
 .LikeButton {
-    display: none;
+  display: none;
 }
 .LikeNumber {
-    font-size: 16px;
-    border-radius: 5px;
-    width: 35px;
-    height: 25px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background-color: #40C057;
-    font-weight: 400;
-    box-shadow: 0 1px 3px gray;
+  font-size: 16px;
+  border-radius: 5px;
+  width: 35px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #40c057;
+  font-weight: 400;
+  box-shadow: 0 1px 3px gray;
 }
 
 .LikePanel {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    margin: 10px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 10px 50px;
 }
 
 .postAvatar {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    background-color: #CCCCCC;
-    border: 1px solid #333333;
-    margin: 10px;
-    align-self: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #cccccc;
+  border: 1px solid #333333;
+  margin: 10px;
+  align-self: center;
 }
 
 .PostItem {
-    background-color: #eee;
-    border-bottom: 1px solid #ccc;
+  background-color: #eee;
+  border-bottom: 1px solid #ccc;
 }
 .PostItem:last-child {
-    border-bottom: 0;
+  border-bottom: 0;
 }
 
 .postInner {
-    overflow: hidden;
-    margin: 10px 0;
+  overflow: hidden;
+  margin: 10px 0;
 }
 
 .postUpperPart {
-    display: flex;
+  display: flex;
 }
 
 .PostOwner {
-    font-weight: 900;
-    font-size: 18px; 
+  font-weight: 900;
+  font-size: 18px;
 }
 .PostText {
-    margin-top: 10px;
-    font-weight: 400;
-    font-size: 16px;
-    letter-spacing: 0.5px;
+  margin-top: 10px;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 0.5px;
 }

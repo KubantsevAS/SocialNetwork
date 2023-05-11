@@ -1,91 +1,91 @@
 .ProfileFormSub {
-    display: none;
+  display: none;
 }
 
 .mainInfo {
-    margin: 30px 0 10px;
+  margin: 30px 0 10px;
 }
 
 .mainInfo__item {
-    margin-top: 20px;
-    position: relative;
-    border-bottom: 1px solid #cccccc;
+  margin-top: 20px;
+  position: relative;
+  border-bottom: 1px solid #cccccc;
 }
 
 .mainInfo__item::before {
-    content: attr(subscribe);
-    position: absolute;
-    top: -20px;
-    left: 0;
-    font-size: 12px;
-    padding: 2px;
-    font-weight: 200;
-    color: grey;
+  content: attr(subscribe);
+  position: absolute;
+  top: -20px;
+  left: 0;
+  font-size: 12px;
+  padding: 2px;
+  font-weight: 200;
+  color: grey;
 }
 
 .input {
-    font-size: 20px;
-    font-weight: 400;
-    padding: 3px;
-    width: 100%;
-    border-radius: 2px;
-    border: 1px solid #cccccc;
-    resize: none;
+  font-size: 20px;
+  font-weight: 400;
+  padding: 3px;
+  width: 100%;
+  border-radius: 2px;
+  border: 1px solid #cccccc;
+  resize: none;
 }
-.input:focus{
-    outline: 1px solid #40C057;
-    box-shadow: 0 0 10px #40C057;
+.input:focus {
+  outline: 1px solid #40c057;
+  box-shadow: 0 0 10px #40c057;
 }
-.input:hover{
-    box-shadow: 0 0 10px #40C057;
+.input:hover {
+  box-shadow: 0 0 10px #40c057;
 }
 
 .checkbox {
-    width: 30px;
-    height: 30px;
+  width: 30px;
+  height: 30px;
 }
 
 .contactContainer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 5px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px 0;
 }
 
 .contactField {
-    height: 25px;
-    font-size: 16px;
-    border: 1px solid #cccccc;
-    border-radius: 2px;
-    padding: 3px 5px;
+  height: 25px;
+  font-size: 16px;
+  border: 1px solid #cccccc;
+  border-radius: 2px;
+  padding: 3px 5px;
 }
 .contactField:focus {
-    outline: 1px solid #40C057;
-    box-shadow: 0 0 10px #40C057;
+  outline: 1px solid #40c057;
+  box-shadow: 0 0 10px #40c057;
 }
 .contactField:hover {
-    box-shadow: 0 0 10px #40C057;
+  box-shadow: 0 0 10px #40c057;
 }
 
 .contactsHeader {
-    font-size: 30px;
-    margin: 10px 0;
-    font-weight: 900;
+  font-size: 30px;
+  margin: 10px 0;
+  font-weight: 900;
 }
 
 .contactsError {
-    color: red;
+  color: red;
 }
 
 @media (max-width: 700px) {
-    .input {
-        font-size: 14px;
-    }
-    .contactField {
-        font-size: 14px;
-        height: 20px;
-    }
-    .contactContainer {
-        display: block   
-    }
+  .input {
+    font-size: 14px;
+  }
+  .contactField {
+    font-size: 14px;
+    height: 20px;
+  }
+  .contactContainer {
+    display: block;
+  }
 }

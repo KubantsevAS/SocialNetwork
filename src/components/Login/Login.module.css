@@ -1,20 +1,19 @@
 .loginForm {
-    width: 450px;
-    margin: 30px auto;
-    padding: 20px 20px 70px;
-    text-align: center;
-    background-color: white;
-    box-shadow: 0 2px 3px #555555;
+  width: 450px;
+  margin: 30px auto;
+  padding: 20px 20px 70px;
+  text-align: center;
+  background-color: white;
+  box-shadow: 0 2px 3px #555555;
 }
 
 .header {
-    font-size: 40px;
-    font-weight: 900;
+  font-size: 40px;
+  font-weight: 900;
 }
 
-
 @media (max-width: 700px) {
-    .loginForm {
-        width: 300px;
-    }
+  .loginForm {
+    width: 300px;
+  }
 }
