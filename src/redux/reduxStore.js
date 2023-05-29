@@ -13,7 +13,7 @@ import thunkMiddleware from 'redux-thunk';
 import appReducer from './appReducer';
 
 const reducers = combineReducers({
-  profilePage: profileReducer, // profileReducer : profileReducer,
+  profilePage: profileReducer,
   messagesPage: dialogsReducer,
   usersPage: usersReducer,
   auth: authReducer,
