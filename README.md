@@ -1,70 +1,33 @@
-# Getting Started with Create React App
+## **Social Network App**
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**For login you can use my credentials:**
+- Login: veng93@yandex.ru
+- Password: 12345
 
-## Available Scripts
+Without logging in, you can only check the 'All users' and the 'About' tabs.
+After five failed login attempts, you will see a captcha that needs to be solved.
 
-In the project directory, you can run:
+## **Main information**
 
-### `npm start`
+- On the 'Profile' tab, you can change your profile info, update status and photo. The API that was used does not allow you to save posts, so they are in the redux store.
+- The 'Messages' tab is not working yet due to the same API capabilities. So you can only write messages in an improvised chat, without choosing a user.
+- On the 'Friends' tab, you see a list of users you are followed to. You can go to each user's page by clicking on their name or photo.
+- On the 'All users' tab, you can see all the Network users. You can go to each user's page and also click the button to follow or unfollow user.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## **Used tech stack**
+- React v18
+- React-router-dom
+- Redux
+- Redux-Thunk
+- React-Redux
+- React-final-form
+- Axios
+- Reselect
+- Jest for some unit tests
+- Yarn as a package manager
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## **Installation and Prerequisites**
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Download or Clone the Project from this repository.
+2. Run command on terminal or cmd `npm install` or `yarn`.
+3. Then Run command `npm start` or `yarn start`.
