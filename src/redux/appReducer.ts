@@ -1,4 +1,4 @@
-import { getLogin } from './authReducer.ts';
+import { getLogin } from './authReducer';
 
 const INIT_SUCCESS = 'INIT_SUCCESS';
 

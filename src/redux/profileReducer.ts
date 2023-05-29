@@ -7,18 +7,53 @@ const DELETE_POST = 'profile/DELETE_POST';
 const SAVE_PHOTO_SUCCESS = 'profile/SAVE_PHOTO_SUCCESS';
 const SET_FORMDATA_ERROR = 'SET_FORMDATA_ERROR';
 
+type PostsDataType = {
+  id: number,
+  message: string,
+  number: number,
+};
+
+type ContactsType = {
+    facebook: string,
+    website: string,
+    vk: string,
+    twitter: string,
+    instagram: string,
+    youtube: string,
+    github: string,
+    mainLink: string,
+};
+
+type PhotosType = {
+  small: string | null;
+  large: string| null;
+};
+
+type ProfileType = {
+  userId: number,
+  aboutMe: string,
+  lookingForAJob: boolean,
+  lookingForAJobDescription: string,
+  fullName: string,
+  contacts: ContactsType,
+  photos: PhotosType,
+};
+
 const initialState = {
   postsData: [
     { id: 1, message: "It's a hard code on a hard drive!", number: 20 },
     { id: 2, message: 'My first post', number: 15 },
     { id: 3, message: "Let's celebrate and create some app", number: 32 },
-  ],
-  profile: null,
-  status: '',
-  formError: false,
+    // eslint-disable-next-line prettier/prettier
+  ] as Array<PostsDataType>,
+  profile: null as ProfileType | null,
+  status: '' as string,
+  formError: false as boolean,
 };
 
-const profileReducer = (state = initialState, action) => {
+export type InitialStateType = typeof initialState;
+
+const profileReducer = (state = initialState, action: any) => {
   switch (action.type) {
     case ADD_POST:
       const newId = state.postsData[state.postsData.length - 1].id;

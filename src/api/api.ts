@@ -7,12 +7,11 @@ const instance = axios.create({
 });
 
 export const usersAPI = {
-  getUsers(currentPage = 1, pageSize = 10) {
-    return instance
-      .get(`users?page=${currentPage}&count=${pageSize}`)
-      .then((response) => {
-        return response.data;
-      });
+  async getUsers(currentPage = 1, pageSize = 10) {
+    const response = await instance.get(
+      `users?page=${currentPage}&count=${pageSize}`
+    );
+    return response.data;
   },
 
   follow(userId) {
@@ -84,12 +83,11 @@ export const authAPI = {
 };
 
 export const friendsAPI = {
-  getUsers(friend, currentPage, pageSize) {
-    return instance
-      .get(`users?friend=${friend}&page=${currentPage}&count=${pageSize}`)
-      .then((response) => {
-        return response.data;
-      });
+  async getUsers(friend, currentPage, pageSize) {
+    const response = await instance.get(
+      `users?friend=${friend}&page=${currentPage}&count=${pageSize}`
+    );
+    return response.data;
   },
 };
 

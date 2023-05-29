@@ -4,13 +4,13 @@ import {
   legacy_createStore as createStore,
   compose,
 } from 'redux';
-import profileReducer from './profileReducer.js';
-import dialogsReducer from './dialogsReducer.js';
-import friendsReducer from './friendsReducer.js';
-import usersReducer from './usersReducer.js';
-import authReducer from './authReducer.ts';
+import profileReducer from './profileReducer';
+import dialogsReducer from './dialogsReducer';
+import friendsReducer from './friendsReducer';
+import usersReducer from './usersReducer';
+import authReducer from './authReducer';
 import thunkMiddleware from 'redux-thunk';
-import appReducer from './appReducer.ts';
+import appReducer from './appReducer';
 
 const reducers = combineReducers({
   profilePage: profileReducer, // profileReducer : profileReducer,
