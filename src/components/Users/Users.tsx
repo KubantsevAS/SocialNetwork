@@ -1,8 +1,21 @@
-import React from 'react';
+import React, { FC } from 'react';
 import Paginator from '../Common/Paginator/Paginator';
 import User from './User/User';
+import { UserType } from '../../types/types';
 
-const Users = ({
+interface IUsersProps {
+  currentPage: number;
+  onPageChanged: (pageNumber: number) => void;
+  totalUsersCount: number;
+  pageSize: number;
+  users: UserType[];
+  followingInProgress: number[];
+  follow: () => void;
+  unfollow: () => void;
+  isAuth: boolean;
+}
+
+const Users: FC<IUsersProps> = ({
   currentPage,
   onPageChanged,
   totalUsersCount,

@@ -1,7 +1,15 @@
 import React, { useState } from 'react';
-import styles from './Paginator.module.css';
+import styles from './Paginator.module.scss';
 
-const Paginator = ({
+interface IPaginatorProps {
+  currentPage: number;
+  onPageChanged: (pageNumber: number) => void;
+  totalUsersCount: number;
+  pageSize: number;
+  portionSize: number;
+}
+
+const Paginator: React.FC<IPaginatorProps> = ({
   currentPage,
   onPageChanged,
   totalUsersCount,
@@ -15,7 +23,9 @@ const Paginator = ({
   }
 
   const portionCount = Math.ceil(pagesCount / portionSize);
-  let [portionNumber, setPortionNumber] = useState(Math.ceil(currentPage / 10));
+  const [portionNumber, setPortionNumber] = useState(
+    Math.ceil(currentPage / 10)
+  );
   const leftPortionPageNumber = (portionNumber - 1) * portionSize + 1;
   const rightPortionPageNumber = portionNumber * portionSize;
 
@@ -30,7 +40,7 @@ const Paginator = ({
           <button
             id="sprev"
             onClick={() => {
-              setPortionNumber((portionNumber = 1));
+              setPortionNumber(1);
             }}
             className={styles.btn}
           ></button>
@@ -99,7 +109,7 @@ const Paginator = ({
           <button
             id="snext"
             onClick={() => {
-              setPortionNumber((portionNumber = portionCount));
+              setPortionNumber(portionCount);
             }}
             className={styles.btn}
           ></button>

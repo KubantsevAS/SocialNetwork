@@ -1,6 +1,7 @@
 ## **Social Network App**
 
 **For login you can use my credentials:**
+
 - Login: veng93@yandex.ru
 - Password: 12345
 
@@ -15,6 +16,7 @@ After five failed login attempts, you will see a captcha that needs to be solved
 - On the 'All users' tab, you can see all the Network users. You can go to each user's page and also click the button to follow or unfollow user.
 
 ## **Used tech stack**
+
 - React v18
 - React-router-dom
 - Redux

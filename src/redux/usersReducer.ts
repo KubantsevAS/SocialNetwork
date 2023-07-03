@@ -1,5 +1,5 @@
 import { usersAPI } from '../api/api';
-import { PhotosType, UserType } from '../types/types';
+import { UserType } from '../types/types';
 
 const FOLLOW = 'FOLLOW';
 const UNFOLLOW = 'UNFOLLOW';
@@ -9,16 +9,16 @@ const SET_TOTAL_USERS_COUNT = 'SET-TOTAL-USERS-COUNT';
 const TOGGLE_IS_FETCHING = 'TOGGLE_IS_FETCHING';
 const TOGGLE_IS_FOLLOWING_PROGRESS = 'TOGGLE_IS_FOLLOWING_PROGRESS';
 
-type InitialStateType = {
-  users: Array<UserType>,
-  pageSize: number,
-  totalUsersCount: number,
-  currentPage: number,
-  isFetching: boolean,
-  followingInProgress: Array<boolean | number>,
-};
+interface IInitialStateType {
+  users: UserType[];
+  pageSize: number;
+  totalUsersCount: number;
+  currentPage: number;
+  isFetching: boolean;
+  followingInProgress: (boolean | number)[];
+}
 
-const initialState: InitialStateType = {
+const initialState: IInitialStateType = {
   users: [],
   pageSize: 5,
   totalUsersCount: 0,
@@ -74,40 +74,40 @@ const usersReducer = (state = initialState, action: any) => {
 
 //    ACTION CREATERS
 
-type acceptFollowActionType = {
-  type: typeof FOLLOW,
-  userId: number,
-};
+interface acceptFollowActionType {
+  type: typeof FOLLOW;
+  userId: number;
+}
 
 export const acceptFollow = (userId: number): acceptFollowActionType => ({
   type: FOLLOW,
   userId,
 });
 
-type acceptUnfollowActionType = {
-  type: typeof UNFOLLOW,
-  userId: number,
-};
+interface acceptUnfollowActionType {
+  type: typeof UNFOLLOW;
+  userId: number;
+}
 
 export const acceptUnfollow = (userId: number): acceptUnfollowActionType => ({
   type: UNFOLLOW,
   userId,
 });
 
-type setUsersActionType = {
-  type: typeof SET_USERS,
-  users: Array<UserType>,
-};
+interface setUsersActionType {
+  type: typeof SET_USERS;
+  users: UserType[];
+}
 
-export const setUsers = (users: Array<UserType>): setUsersActionType => ({
+export const setUsers = (users: UserType[]): setUsersActionType => ({
   type: SET_USERS,
   users,
 });
 
-type setCurrentPageActionType = {
-  type: typeof SET_CURRENT_PAGE,
-  currentPage: number,
-};
+interface setCurrentPageActionType {
+  type: typeof SET_CURRENT_PAGE;
+  currentPage: number;
+}
 
 export const setCurrentPage = (
   currentPage: number
@@ -116,10 +116,10 @@ export const setCurrentPage = (
   currentPage,
 });
 
-type setTotalUsersCountActionType = {
-  type: typeof SET_TOTAL_USERS_COUNT,
-  count: number,
-};
+interface setTotalUsersCountActionType {
+  type: typeof SET_TOTAL_USERS_COUNT;
+  count: number;
+}
 
 export const setTotalUsersCount = (
   totalUsersCount: number
@@ -128,10 +128,10 @@ export const setTotalUsersCount = (
   count: totalUsersCount,
 });
 
-type toggleIsFetchingActionType = {
-  type: typeof TOGGLE_IS_FETCHING,
-  isFetching: boolean,
-};
+interface toggleIsFetchingActionType {
+  type: typeof TOGGLE_IS_FETCHING;
+  isFetching: boolean;
+}
 
 export const toggleIsFetching = (
   toggleFetching: boolean
@@ -140,11 +140,11 @@ export const toggleIsFetching = (
   isFetching: toggleFetching,
 });
 
-type toggleFollowingProgressActionType = {
-  type: typeof TOGGLE_IS_FOLLOWING_PROGRESS,
-  isFetching: boolean,
-  userId: number,
-};
+interface toggleFollowingProgressActionType {
+  type: typeof TOGGLE_IS_FOLLOWING_PROGRESS;
+  isFetching: boolean;
+  userId: number;
+}
 
 export const toggleFollowingProgress = (
   isFetching: boolean,

@@ -6,7 +6,7 @@
   "extends": [
     "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended",
-    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    // "plugin:@typescript-eslint/recommended-requiring-type-checking",
     "plugin:@typescript-eslint/strict",
     "plugin:prettier/recommended",
     "prettier"
@@ -15,15 +15,16 @@
   "overrides": [],
   "parserOptions": {
     "ecmaVersion": "latest",
+    "project": "tsconfig.eslint.json",
     "sourceType": "module"
   },
-  "plugins": [
-    "react",
-    "@typescript-eslint",
-    "prettier"
-  ],
+  "plugins": ["react", "@typescript-eslint", "prettier"],
   "root": true,
   "rules": {
+    "@typescript-eslint/no-unnecessary-condition": 0,
+    "@typescript-eslint/prefer-nullish-coalescing": 0,
+    "@typescript-eslint/no-empty-function": 0,
+    "no-empty": 0,
     "require-jsdoc": "off",
     "react/prop-types": 0,
     "prettier/prettier": [

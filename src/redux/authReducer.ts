@@ -46,17 +46,17 @@ const authReducer = (state = initialState, action: any): InitialStateType => {
 };
 
 type SetAuthUserDataActionPayloadType = {
-  id: number | null,
-  email: string | null,
-  login: string | null,
-  isAuth: boolean,
-  errorMessage: boolean,
-  captchaUrl: string | null,
+  id: number | null;
+  email: string | null;
+  login: string | null;
+  isAuth: boolean;
+  errorMessage: boolean;
+  captchaUrl: string | null;
 };
 
 type SetAuthUserDataActionType = {
-  type: typeof SET_USER_DATA,
-  payload: SetAuthUserDataActionPayloadType,
+  type: typeof SET_USER_DATA;
+  payload: SetAuthUserDataActionPayloadType;
 };
 
 const setUserPhoto = (userPhoto: string) => ({
@@ -79,10 +79,10 @@ export const setAuthUserData = (
 });
 
 type GetCaptchaUrlSuccessActionType = {
-  type: typeof GET_CAPTCHA_URL_SUCCESS,
+  type: typeof GET_CAPTCHA_URL_SUCCESS;
   payload: {
-    captchaUrl: string,
-  },
+    captchaUrl: string;
+  };
 };
 
 const getCaptchaUrlSuccess = (

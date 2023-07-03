@@ -2,15 +2,15 @@ import { getLogin } from './authReducer';
 
 const INIT_SUCCESS = 'INIT_SUCCESS';
 
-export type InitialStateType = {
-  initialized: boolean,
-};
+export interface IInitialStateType {
+  initialized: boolean;
+}
 
-const initialState: InitialStateType = {
+const initialState: IInitialStateType = {
   initialized: false,
 };
 
-const appReducer = (state = initialState, action: any): InitialStateType => {
+const appReducer = (state = initialState, action: any): IInitialStateType => {
   switch (action.type) {
     case INIT_SUCCESS:
       return {
@@ -22,11 +22,11 @@ const appReducer = (state = initialState, action: any): InitialStateType => {
   }
 };
 
-type InitSuccessActionType = {
-  type: typeof INIT_SUCCESS,
-};
+interface IInitSuccessActionType {
+  type: typeof INIT_SUCCESS;
+}
 
-export const initSuccess = (): InitSuccessActionType => ({
+export const initSuccess = (): IInitSuccessActionType => ({
   type: INIT_SUCCESS,
 });
 

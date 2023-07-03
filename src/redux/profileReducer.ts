@@ -8,12 +8,12 @@ const DELETE_POST = 'profile/DELETE_POST';
 const SAVE_PHOTO_SUCCESS = 'profile/SAVE_PHOTO_SUCCESS';
 const SET_FORMDATA_ERROR = 'SET_FORMDATA_ERROR';
 
-type InitialStateType = {
-  postsData: Array<PostsDataType>,
-  profile: ProfileType | null,
-  status: string | boolean,
-  formError: boolean,
-};
+interface InitialStateType {
+  postsData: PostsDataType[];
+  profile: ProfileType | null;
+  status: string | boolean;
+  formError: boolean;
+}
 
 const initialState: InitialStateType = {
   postsData: [
@@ -70,18 +70,18 @@ const profileReducer = (state = initialState, action: any) => {
 // ACTION CREATORS
 
 type SetStatusActionType = {
-  type: typeof SET_USER_STATUS,
-  status: string,
+  type: typeof SET_USER_STATUS;
+  status: string;
 };
 
 type AddPostActionType = {
-  type: typeof ADD_POST,
-  newPostText: string,
+  type: typeof ADD_POST;
+  newPostText: string;
 };
 
 type DeletePostActionType = {
-  type: typeof DELETE_POST,
-  postId: number,
+  type: typeof DELETE_POST;
+  postId: number;
 };
 
 export const setStatus = (status: string): SetStatusActionType => ({
@@ -100,8 +100,8 @@ export const deletePost = (postId: number): DeletePostActionType => ({
 });
 
 type SetUserProfileActionType = {
-  type: typeof SET_USER_PROFILE,
-  profile: ProfileType,
+  type: typeof SET_USER_PROFILE;
+  profile: ProfileType;
 };
 
 export const setUserProfile = (
@@ -112,8 +112,8 @@ export const setUserProfile = (
 });
 
 type SavePhotoSuccessActionType = {
-  type: typeof SAVE_PHOTO_SUCCESS,
-  photos: PhotosType,
+  type: typeof SAVE_PHOTO_SUCCESS;
+  photos: PhotosType;
 };
 
 const savePhotoSuccess = (photos: PhotosType): SavePhotoSuccessActionType => ({
@@ -122,8 +122,8 @@ const savePhotoSuccess = (photos: PhotosType): SavePhotoSuccessActionType => ({
 });
 
 type SetFormErrorMessageActionType = {
-  type: typeof SET_FORMDATA_ERROR,
-  formError: boolean,
+  type: typeof SET_FORMDATA_ERROR;
+  formError: boolean;
 };
 
 const setFormErrorMessage = (

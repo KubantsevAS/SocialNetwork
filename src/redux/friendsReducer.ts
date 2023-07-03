@@ -5,16 +5,16 @@ const SET_FOLLOWED_USERS = 'SET_FOLLOWED_USERS';
 const TOGGLE_IS_FETCHING = 'TOGGLE_IS_FETCHING';
 
 type UsersType = {
-  name: string,
-  id: string | number,
-  status: string,
-  photos: any,
+  name: string;
+  id: string | number;
+  status: string;
+  photos: any;
 };
 
 type InitialStateType = {
-  users: Array<UsersType>,
-  isFetching: boolean,
-  followed: boolean,
+  users: Array<UsersType>;
+  isFetching: boolean;
+  followed: boolean;
 };
 
 const initialState: InitialStateType = {
@@ -48,8 +48,8 @@ const friendsReducer = (state = initialState, action: any) => {
 };
 
 type SetFriendsType = {
-  type: typeof SET_FOLLOWED_USERS,
-  users: UsersType,
+  type: typeof SET_FOLLOWED_USERS;
+  users: UsersType;
 };
 
 export const setFriends = (users: UsersType): SetFriendsType => ({
@@ -58,8 +58,8 @@ export const setFriends = (users: UsersType): SetFriendsType => ({
 });
 
 type ToggleIsFetchingType = {
-  type: typeof TOGGLE_IS_FETCHING,
-  isFetching: boolean,
+  type: typeof TOGGLE_IS_FETCHING;
+  isFetching: boolean;
 };
 
 export const toggleIsFetching = (

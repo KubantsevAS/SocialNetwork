@@ -5,12 +5,12 @@ type DialogDataType = {
   id: number;
   name: string;
   ava: number;
-}
+};
 
 type MessagesDataType = {
   id: number;
   message: string;
-}
+};
 
 const initialState = {
   dialogsData: [
@@ -56,7 +56,7 @@ const dialogsReducer = (
 type AddMessageType = {
   type: typeof ADD_MESSAGE;
   newMessageText: string;
-}
+};
 
 export const addMessage = (newMessageText: string): AddMessageType => ({
   type: ADD_MESSAGE,
